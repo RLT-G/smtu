@@ -5,7 +5,12 @@ import './index.css';
 import { authContext } from './context';
 import Main from './components/pages/Main';
 import NotFound from './components/pages/NotFound';
+<<<<<<< HEAD
 import OpabVideos from './components/pages/OpabVideos';
+=======
+import Faculties from './components/pages/Faculties';
+
+>>>>>>> 831cec8ba192aa181d30428cb07693fa30f6948f
 
 interface RouteConfig {
     path: string;
@@ -26,7 +31,7 @@ const App: React.FC = () => {
         // Каталог
         { path: "/catalog", component: NotFound, exact: true },
         // Факультеты общая
-        { path: "/faculties", component: NotFound, exact: true },
+        { path: "/faculties", component: Faculties, exact: true },
         // Факультеты Разделы
         { path: "/faculties_detail", component: NotFound, exact: true },
         // Раздел ОПАБ
