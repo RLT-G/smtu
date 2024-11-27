@@ -1,0 +1,152 @@
+.HeaderText {
+  width: 850px;
+  height: 186px;
+  display: flex;
+  margin-left: 200px;
+  margin-top: 136px;
+  margin-bottom: 136px;
+  flex-direction: column;
+}
+.HeaderText .Text1 {
+  width: 100%;
+  height: 150px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700px;
+  font-size: 64px;
+  color: #01437c;
+}
+.HeaderText .Text2 {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500px;
+  font-size: 30px;
+  color: #01437c;
+}
+.MainText {
+  display: flex;
+  width: 1200px;
+  height: 498px;
+  margin-left: 200px;
+  flex-direction: column;
+}
+.MainText .UpText {
+  width: 1200px;
+  height: 26px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #01437c;
+  margin-bottom: 40px;
+}
+.MainText .ProjectAutors {
+  display: flex;
+  width: 1200px;
+  height: 146px;
+  flex-direction: row;
+}
+.MainText .ProjectAutors .Left {
+  width: 285px;
+  height: 22px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 19px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #01437c;
+  gap: 20px;
+}
+.MainText .ProjectAutors .Right{
+    display: flex;
+    flex-direction: column;
+}
+.MainText .ProjectAutors .Right .Span1, .Span3{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #01437c;
+  }
+  .MainText .ProjectAutors .Right .Span2{
+    width: 666px;
+    height: 20px;
+    margin-bottom: 20px;
+  }
+  .MainText .ProjectAutors .Right .Span4{
+    width: 666px;
+    height: 20px;
+    margin-bottom: 40px;
+  }
+  .MainText .ProjectAutors .Right .Span2, .Span4{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437c;
+  }
+.MainText .Students{
+    display: flex;
+    width: 1200px;
+    height: 128px;
+    flex-direction: row;
+}
+.MainText .Students .Left {
+    width: 285px;
+    height: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437c;
+    gap: 20px;
+  }
+  .MainText .Students .Right{
+    width: 793px;
+    height: 128px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437c;
+  }
+  .MainText .TextAutors{
+    display: flex;
+    width: 1200px;
+    height: 128px;
+    flex-direction: row;
+  }
+  .MainText .TextAutors .Left {
+    width: 285px;
+    height: 22px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437c;
+    gap: 20px;
+  }
+  .MainText .TextAutors .Right{
+    display: flex;
+    flex-direction: column;
+    width: 793px;
+    height: 116px;
+  }
+  .MainText .TextAutors .Right .SpanR1, .SpanR3{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: #01437c;
+  }
+  .MainText .TextAutors .Right .SpanR2{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437c;
+    margin-bottom: 20px;
+  }
+    

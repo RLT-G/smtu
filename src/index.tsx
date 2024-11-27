@@ -5,7 +5,7 @@ import './index.css';
 import { authContext } from './context';
 import Main from './components/pages/Main';
 import NotFound from './components/pages/NotFound';
-
+import OpabVideos from './components/pages/OpabVideos';
 
 interface RouteConfig {
     path: string;
@@ -34,7 +34,7 @@ const App: React.FC = () => {
         // ОПАБ календарь
         { path: "/opab_calendar", component: NotFound, exact: true },
         // ОПАБ Видео
-        { path: "/opab_video", component: NotFound, exact: true },
+        { path: "/opab_video", component: OpabVideos, exact: true },
         // Остальное
         { path: "/other", component: NotFound, exact: true },
         // Новости/статьи
