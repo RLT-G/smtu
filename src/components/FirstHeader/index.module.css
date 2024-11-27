@@ -1,0 +1,82 @@
+.HeaderWrapper{
+    width: 100%;
+    height: 862px;
+    background: url(../../assets/img/MainBackground1.webp) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 200px 50px 200px;
+    gap: 480px;
+    position: relative;
+}
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+}
+.NavBar button{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+.Search{
+    width: 25px;
+    height: 25px;
+    background: url(../../assets/img/search.svg) no-repeat;
+    background-size: cover;
+}
+.MainText{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #FFFFFF;
+}
+.Content{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFFFFF;
+    max-width: 320px;
+}
+.logo{
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    width: 355px;
+    height: 730px;
+    background: url(../../assets/img/smtuLogoMainHeader.svg) no-repeat;
+    background-size: cover;
+    stroke-width: 1px;
+    stroke: #F0F0F0;
+}
+.arrow{
+    position: absolute;
+    bottom: 70px;
+    right: 200px;
+    width: 40px;
+    height: 107px;
+    background: url(../../assets/img/arrowDown.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    transition: 0.2s;
+}
+.arrow:hover{
+    background: url(../../assets/img/arrowDownHover.svg) no-repeat;
+    background-size: cover;
+}

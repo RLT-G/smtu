@@ -1,0 +1,100 @@
+.HeaderWrapper{
+    width: 100%;
+    height: 272px;
+    background: url(../../assets/img/MainBackground2.webp) no-repeat;
+    background-size: cover;
+    padding: 50px 200px 10px 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.HeaderTop{
+    display: flex;
+    justify-content: space-between;
+}
+.LogoAndText{
+    display: flex;
+    gap: 30px;
+}
+.Logo{
+    width: 60px;
+    height: 103px;
+    background: url(../../assets/img/smtuLogoSecondHeader.svg) no-repeat;
+    background-size: cover;
+    fill: #FFFFFF;
+}
+.Text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.Title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+}
+.Content{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    max-width: 260px;
+}
+.Content span{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #FFF;
+}
+.NavBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: start;
+    gap: 15px;
+}
+.NavBar button{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.Search{
+    width: 25px;
+    height: 25px;
+    background: url(../../assets/img/search.svg) no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -3px;
+}
+.HeaderDown{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.DownNavBarItem{
+    display: flex;
+    flex-direction: column;
+    position: relative;    
+}
+.DownNavBarText{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;    
+    cursor: pointer;
+}

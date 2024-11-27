@@ -1,0 +1,37 @@
+.Wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 45px;
+    position: relative;
+    cursor: pointer;
+}
+.Wrapper::after{
+    content: '';
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 3px solid #01437C;
+    transition: 0.2s;
+    z-index: 2;
+}
+.Text{
+    font-family: "Ubuntu", sans-serif;;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #01437C;
+    transition: 0.2s;
+    z-index: 3;
+}
+
+.Wrapper:hover::after{
+    border: 3px solid #00AEEF;
+}
+.Wrapper:hover .Text{
+    color: #00AEEF;
+}

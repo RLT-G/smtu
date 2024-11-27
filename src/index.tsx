@@ -1,19 +1,71 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { authContext } from './context';
+import Main from './components/pages/Main';
+import NotFound from './components/pages/NotFound';
+
+
+interface RouteConfig {
+    path: string;
+    component: React.ComponentType;
+    exact: boolean
+}
+
+const App: React.FC = () => {
+    const [isAuth, setIsAuth] = useState<boolean>(false);
+
+    const routes: Array<RouteConfig> = [
+        // Главная
+        { path: "/", component: Main, exact: true },
+        // Страница Персоны
+        { path: "/person", component: NotFound, exact: true },
+        // История
+        { path: "/history", component: NotFound, exact: true },
+        // Каталог
+        { path: "/catalog", component: NotFound, exact: true },
+        // Факультеты общая
+        { path: "/faculties", component: NotFound, exact: true },
+        // Факультеты Разделы
+        { path: "/faculties_detail", component: NotFound, exact: true },
+        // Раздел ОПАБ
+        { path: "/opab", component: NotFound, exact: true },
+        // ОПАБ календарь
+        { path: "/opab_calendar", component: NotFound, exact: true },
+        // ОПАБ Видео
+        { path: "/opab_video", component: NotFound, exact: true },
+        // Остальное
+        { path: "/other", component: NotFound, exact: true },
+        // Новости/статьи
+        { path: "/news_articles", component: NotFound, exact: true },
+        // Страница статьи
+        { path: "/articles", component: NotFound, exact: true },
+        // Отзывы
+        { path: "/feedbacks", component: NotFound, exact: true },
+        // Контакты
+        { path: "/contacts", component: NotFound, exact: true },
+        // 404
+        { path: "*", component: NotFound, exact: true },
+    ];
+    
+    return (
+      <authContext.Provider value={{isAuth, setIsAuth}}>
+          <BrowserRouter>
+              <Routes>
+                  {routes.map(({path, component: Component, exact}, index) => (
+                    <Route key={index} path={path} element={<Component />} />
+                  ))}
+              </Routes>
+          </BrowserRouter>
+      </authContext.Provider>
+    )
+};
+
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    document.getElementById('root') as HTMLElement
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+root.render(<App />);

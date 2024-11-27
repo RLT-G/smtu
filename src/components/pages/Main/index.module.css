@@ -1,0 +1,104 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 120px 200px;
+}
+.Part{
+    width: 100%;
+    display: flex;
+}
+.Part1{
+    gap: 20px;
+    margin-bottom: 100px;
+}
+.Part1 .Left{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 66%;
+    min-width: 66%;
+    gap: 20px;
+}
+.Part1LeftLink{
+    width: 325px;
+    height: 325px;
+    transition: 0.2s;
+}
+.Part1LeftLink:nth-child(1){
+    background: url(../../../assets/img/hero.webp) no-repeat;
+    background-size: cover;
+}
+.Part1LeftLink:nth-child(2){
+    background: url(../../../assets/img/faculc.webp) no-repeat;
+    background-size: cover;
+}
+.Part1LeftLink:nth-child(3){
+    background: url(../../../assets/img/students.webp) no-repeat;
+    background-size: cover;
+}
+.Part1LeftLink:nth-child(4){
+    background: url(../../../assets/img/vipusk.webp) no-repeat;
+    background-size: cover;
+}
+.Part1LeftLink::before, .Part2LeftLink::before, .Part3Left::before, Part3RightItem1::before, .Part3RightItem1::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+    z-index: 2;
+    transition: 0.2s;
+}
+.Part1LeftLink:hover::before, .Part2LeftLink:hover::before, .Part3Left:hover::before, .Part3RightItem1:hover::before{
+    background: none;
+}
+.Part1 .Right{
+    width: 33%;
+    max-width: 33%;
+    
+}
+.Part1RightText{
+    width: 100%;
+    height: 670px;
+
+}
+
+
+.Part2{
+    width: 100%;
+    height: 575px;
+    margin-bottom: 120px;
+}
+.Part2LeftLink {
+    width: 100%;
+    height: 100%;
+    background: url(../../../assets/img/obaprebyata.webp) no-repeat;
+    background-size: cover;
+}
+
+.Part3{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.Part3Left{
+    width: 380px;
+    height: 786px;
+    background: url(../../../assets/img/catalog.webp) no-repeat;
+    background-size: cover;
+}
+.Part3Right{
+    width: calc(100% - 400px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.Part3RightItem1{
+    width: 100%;
+    height: 383px;
+    background: url(../../../assets/img/prepod.webp) no-repeat;
+    background-size: cover;
+}
