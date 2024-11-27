@@ -5,6 +5,7 @@ import './index.css';
 import { authContext } from './context';
 import Main from './components/pages/Main';
 import NotFound from './components/pages/NotFound';
+import Faculties from './components/pages/Faculties';
 
 
 interface RouteConfig {
@@ -26,7 +27,7 @@ const App: React.FC = () => {
         // Каталог
         { path: "/catalog", component: NotFound, exact: true },
         // Факультеты общая
-        { path: "/faculties", component: NotFound, exact: true },
+        { path: "/faculties", component: Faculties, exact: true },
         // Факультеты Разделы
         { path: "/faculties_detail", component: NotFound, exact: true },
         // Раздел ОПАБ
