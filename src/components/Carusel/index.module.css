@@ -1,0 +1,34 @@
+.Wrapper{
+    display: flex;
+    gap: 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.ArrowRight, .ArrowLeft{
+    border: none;
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    width: 52px;
+    height: 24px;
+    transition: 0.2s;
+    cursor: pointer;
+    /* transform: translateX(); */
+}
+.ArrowRight{
+    background: url(../../assets/img/arrowdefault.svg) no-repeat;
+    background-size: cover;
+    right: -72px;
+}
+.ArrowLeft{
+    background: url(../../assets/img/arrowdefault.svg) no-repeat;
+    background-size: cover;
+    transform: rotate(180deg);
+    left: -72px;
+}
+.ArrowLeft:hover, .ArrowRight:hover{
+    background: url(../../assets/img/arrowhover.svg) no-repeat;
+}
+.ArrowLeft.Dis, .ArrowRight.Dis{
+    background: url(../../assets/img/arrowhover.svg) no-repeat;
+}

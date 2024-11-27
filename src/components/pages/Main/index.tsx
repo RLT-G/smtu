@@ -3,6 +3,7 @@ import Header from "../../Header";
 import classes from './index.module.css';
 import SquareLinkText from "../../SquareLinkText";
 import SquareText from "../../SquareText";
+import MainPageCarusel from "../../MainPageCarusel";
 
 
 
@@ -34,11 +35,15 @@ const Main: React.FC = () => {
                     <SquareLinkText className={classes.Part3Left} onClick={() => {}}>алфавитный каталог</SquareLinkText>
                     <div className={classes.Part3Right}>
                         <SquareLinkText className={classes.Part3RightItem1} onClick={() => {}}>преподаватели</SquareLinkText>
+                        <SquareText className={classes.Part3RightItem2}>
+                        Многие пали смертью храбрых. Многие имена невозможно восстановить. Но мы всегда будем помнить защитников, героев, молодых ребят, отдавших за нас свои жизни.
+                        <br />Солдат умирает — когда о нём забывают. Мы — не забудем!
+                        </SquareText>
                     </div>
                 </div>
 
                 <div className={[classes.Part, classes.Part4].join(' ')}>
-
+                    <MainPageCarusel />
                 </div>
 
             </div>
