@@ -4,6 +4,7 @@ import classes from './index.module.css';
 import SquareLinkText from "../../SquareLinkText";
 import SquareText from "../../SquareText";
 import MainPageCarusel from "../../MainPageCarusel";
+import Footer from "../../Footer";
 
 
 
@@ -47,7 +48,7 @@ const Main: React.FC = () => {
                 </div>
 
             </div>
-            {/* TODO: footer */}
+            <Footer />
         </>
     )
 }

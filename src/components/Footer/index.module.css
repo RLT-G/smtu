@@ -1,0 +1,99 @@
+.content{
+    width: 100%;
+    height: 24.4rem;
+    background: url("../../assets/img/plashka.webp"), no-repeat;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+}
+.content span{
+    cursor: pointer;
+}
+ .top{
+    display: flex;
+    width: 75%; margin-left: 12.5%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2.8rem;
+    align-items: flex-start;
+}
+ .top .right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+ .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 2.5rem;
+}
+
+
+ .container div{
+    color: var(--unnamed, #FFF);
+    font-family: Ubuntu;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.04688rem;
+    text-decoration: none;
+}
+
+ h1{
+    color: var(--unnamed, #FFF);
+    /* text-align: center; */
+    font-family: Ubuntu;
+    font-size: 1.40625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.07031rem;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+ .first{
+    height: 9rem;
+}
+ .second{
+    height: 12rem;
+}
+ .thirt{
+    height: 9rem;
+}
+
+ .bottom{
+    display: flex;
+    width: 75%;
+    margin-left: 12.5%;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5rem;
+}
+ .bottom .left{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 17%;
+}
+ .bottom .right{
+    color: var(--unnamed, #FFF);
+    text-align: right;
+    font-family: Ubuntu;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.04688rem;
+    text-transform: uppercase;
+}
+
+.LogoFooter{
+    width: 361px;
+    height: 136px;
+    background: url(../../assets/img/logofooter.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}

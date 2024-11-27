@@ -42,7 +42,7 @@ const Carusel: React.FC<ICarusel> = ({ caruselItems, getCaruselType }) => {
 
     const moveRight = (): void => {
         let newOffset = offset - 400
-        if (newOffset >= -(caruselItems.length - 3) * 400){
+        if (newOffset >= -(caruselItems.length - 2) * 400){
             setOffset(offset - 400)
         }
     }
