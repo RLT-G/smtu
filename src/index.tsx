@@ -10,6 +10,7 @@ import Faculties from "./components/pages/Faculties";
 import NewsArticles from "./components/pages/NewsArticles";
 import Feedbacks from "./components/pages/Feedbacks";
 import Person from "./components/pages/Person";
+import Other from "./components/pages/Other";
 
 interface RouteConfig {
   path: string;
@@ -40,7 +41,7 @@ const App: React.FC = () => {
     // ОПАБ Видео
     { path: "/opab_video", component: OpabVideos, exact: true },
     // Остальное
-    { path: "/other", component: NotFound, exact: true },
+    { path: "/other", component: Other, exact: true },
     // Новости/статьи
     { path: "/news_articles", component: NewsArticles, exact: true },
     // Страница статьи

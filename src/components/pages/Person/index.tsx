@@ -12,8 +12,15 @@ import PersonItem from "../../PersonItem";
 const Person: React.FC = () => {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
-    const person_id = Number(params.get('person_id'));
 
+    const get_person_id = (): number => {
+        const person_id = Number(params.get('person_id'));
+        if (person_id >= persons.items.length) {
+            return 1
+        }
+        return person_id
+    }
+    const person_id = get_person_id()
     return (
         <>
             <Header isMainPage={false}/>
