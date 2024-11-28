@@ -1,0 +1,16 @@
+.Button{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    background-color: #01437C;
+    padding: 15px 60px;
+    transition: 0.2s;
+}
+.Button:hover{
+    background-color: #00ABCD;
+}

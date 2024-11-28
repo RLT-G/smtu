@@ -4,13 +4,14 @@ import SecondHeader from "../SecondHeader";
 
 
 interface IHeader {
-    isMainPage: boolean
+    isMainPage: boolean;
+    fScroll?: () => void;
 }
 
 
-const Header: React.FC<IHeader> = ({ isMainPage }) => {
+const Header: React.FC<IHeader> = ({ isMainPage, fScroll }) => {
     if (isMainPage) {
-        return ( <FirstHeader /> )
+        return ( <FirstHeader fScroll={fScroll}/> )
     }
     return ( <SecondHeader /> )
 }

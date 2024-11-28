@@ -5,11 +5,12 @@ interface IArticleItem {
     date: string;
     text: string;
     style?: CSSProperties;
+    className?: string;
 }
 
-const ArticleItem: React.FC<IArticleItem> = ({ date, text, style }) => {
+const ArticleItem: React.FC<IArticleItem> = ({ date, text, style, className }) => {
     return (
-        <div className={classes.Wrapper} style={style}>
+        <div className={[classes.Wrapper, className].join(' ')} style={style} >
             <div className={classes.Ico}></div>
 
             <div className={classes.TextContent}>

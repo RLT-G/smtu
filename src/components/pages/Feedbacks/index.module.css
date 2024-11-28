@@ -1,0 +1,28 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 120px 200px;
+    align-items: center;
+}
+.Title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #01437C;
+    align-self: flex-start;
+    margin-bottom: 60px;
+}
+.FeedbacksContainer{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+.Feedback{
+}
+.Button{
+    width: 385px;
+    height: 74px;
+    margin-bottom: 120px;
+}

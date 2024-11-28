@@ -1,8 +1,11 @@
 import React from "react";
 import classes from './index.module.css'
 
+interface IFirstHeader {
+    fScroll?: () => void
+}
 
-const FirstHeader: React.FC = () => {
+const FirstHeader: React.FC<IFirstHeader> = ({ fScroll }) => {
     return (
         <div className={classes.HeaderWrapper}>
             <div className={classes.NavBar}>
@@ -30,7 +33,7 @@ const FirstHeader: React.FC = () => {
                 <span className={classes.Content}>История в лицах c 1930 до 1990</span>
             </div>
             <div className={classes.logo}></div>
-            <button className={classes.arrow} onClick={() => {console.log('стрелка')}}></button>
+            <button className={classes.arrow} onClick={fScroll}></button>
         </div>
     )
 }

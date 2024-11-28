@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Header from "../../Header";
 import classes from './index.module.css';
 import SquareLinkText from "../../SquareLinkText";
@@ -7,12 +7,17 @@ import MainPageCarusel from "../../MainPageCarusel";
 import Footer from "../../Footer";
 
 
-
 const Main: React.FC = () => {
+    const contentRef = useRef<HTMLDivElement>(null);
+    
+    const scrollToForm = () => {
+        contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <>
-            <Header isMainPage={true}/>
-            <div className={classes.Wrapper}>
+            <Header isMainPage={true} fScroll={scrollToForm}/>
+            <div className={classes.Wrapper} ref={contentRef}>
                 <div className={[classes.Part, classes.Part1].join(' ')}>
                      <div className={classes.Left}>
                         <SquareLinkText className={classes.Part1LeftLink} onClick={() => {}}>Герои</SquareLinkText>

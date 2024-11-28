@@ -1,0 +1,31 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 120px 200px;
+    align-items: center;
+}
+
+.title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #01437C;
+    align-self: flex-start;
+}
+
+.ItemsContainer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
+}
+
+.cart{
+}
+.Button{
+    width: 386px;
+    height: 74px;
+}

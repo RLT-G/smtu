@@ -54,3 +54,6 @@ a{
 body {
   background-color: #FFFFFF;
 }
+html {
+    scroll-behavior: smooth;
+}

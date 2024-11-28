@@ -7,6 +7,8 @@ import Main from "./components/pages/Main";
 import NotFound from "./components/pages/NotFound";
 import OpabVideos from "./components/pages/OpabVideos";
 import Faculties from "./components/pages/Faculties";
+import NewsArticles from "./components/pages/NewsArticles";
+import Feedbacks from "./components/pages/Feedbacks";
 
 interface RouteConfig {
   path: string;
@@ -39,11 +41,11 @@ const App: React.FC = () => {
     // Остальное
     { path: "/other", component: NotFound, exact: true },
     // Новости/статьи
-    { path: "/news_articles", component: NotFound, exact: true },
+    { path: "/news_articles", component: NewsArticles, exact: true },
     // Страница статьи
     { path: "/articles", component: NotFound, exact: true },
     // Отзывы
-    { path: "/feedbacks", component: NotFound, exact: true },
+    { path: "/feedbacks", component: Feedbacks, exact: true },
     // Контакты
     { path: "/contacts", component: NotFound, exact: true },
     // 404

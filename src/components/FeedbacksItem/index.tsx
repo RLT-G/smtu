@@ -6,11 +6,12 @@ interface IFeedbacksItem {
     text: string;
     author: string | undefined;
     style?: CSSProperties;
+    className?: string;
 }
 
-const FeedbacksItem: React.FC<IFeedbacksItem> = ({ date, text, author, style }) => {
+const FeedbacksItem: React.FC<IFeedbacksItem> = ({ date, text, author, style, className }) => {
     return (
-        <div className={classes.Wrapper} style={style}>
+        <div className={[classes.Wrapper, className].join(' ')} style={style}>
             <div className={classes.TitleAndDate}>
                 <span className={classes.Title}>отзыв</span>
                 <span className={classes.Date}>{date}</span>

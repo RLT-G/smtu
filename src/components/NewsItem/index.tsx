@@ -5,11 +5,12 @@ interface INewsItem {
     date: string;
     text: string;
     style?: CSSProperties;
+    className?: string;
 }
 
-const NewsItem: React.FC<INewsItem> = ({ date, text, style }) => {
+const NewsItem: React.FC<INewsItem> = ({ date, text, style, className }) => {
     return (
-        <div className={classes.Wrapper} style={style}>
+        <div className={[classes.Wrapper, className].join(' ')} style={style}>
             <div className={classes.Ico}></div>
 
             <div className={classes.TextContent}>
