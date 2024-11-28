@@ -9,6 +9,7 @@ import OpabVideos from "./components/pages/OpabVideos";
 import Faculties from "./components/pages/Faculties";
 import NewsArticles from "./components/pages/NewsArticles";
 import Feedbacks from "./components/pages/Feedbacks";
+import Person from "./components/pages/Person";
 
 interface RouteConfig {
   path: string;
@@ -23,7 +24,7 @@ const App: React.FC = () => {
     // Главная
     { path: "/", component: Main, exact: true },
     // Страница Персоны
-    { path: "/person", component: NotFound, exact: true },
+    { path: "/person", component: Person, exact: true },
     // История
     { path: "/history", component: NotFound, exact: true },
     // Каталог

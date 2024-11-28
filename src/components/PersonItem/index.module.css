@@ -1,0 +1,64 @@
+.Wrapper{
+    width: 380px;
+    height: 600px;
+    min-width: 380px;
+    position: relative;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.Wrapper::after{
+    content: '';
+    display: block;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    position: absolute;
+    border: 3px solid #01437C;
+    top: 15px;
+    left: 15px;
+    transition: 0.2s;
+}
+.Wrapper:hover::after{
+    border-color: #00AEEF;
+}
+.Ico{
+    background-color: #c0c0c0;
+    height: 387px;
+    width: 100%;
+}
+.TextContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 30px;
+    height: 213px;
+}
+.fio{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    color: #01437C;
+}
+.rank{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #01437C;
+}
+.Tags{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+.Tag{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: #00AEEF;
+}
+/* .Date{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+    color: #01437C;
+} */
