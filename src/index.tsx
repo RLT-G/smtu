@@ -11,6 +11,7 @@ import NewsArticles from "./components/pages/NewsArticles";
 import Feedbacks from "./components/pages/Feedbacks";
 import Person from "./components/pages/Person";
 import Other from "./components/pages/Other";
+import Catalog from "./components/pages/Catalog";
 
 interface RouteConfig {
   path: string;
@@ -27,17 +28,17 @@ const App: React.FC = () => {
     // Страница Персоны
     { path: "/person", component: Person, exact: true },
     // История
-    { path: "/history", component: NotFound, exact: true },
+    // { path: "/history", component: NotFound, exact: true },
     // Каталог
-    { path: "/catalog", component: NotFound, exact: true },
+    { path: "/catalog", component: Catalog, exact: true },
     // Факультеты общая
     { path: "/faculties", component: Faculties, exact: true },
     // Факультеты Разделы
-    { path: "/faculties_detail", component: NotFound, exact: true },
+    // { path: "/faculties_detail", component: NotFound, exact: true },
     // Раздел ОПАБ
-    { path: "/opab", component: NotFound, exact: true },
+    // { path: "/opab", component: NotFound, exact: true },
     // ОПАБ календарь
-    { path: "/opab_calendar", component: NotFound, exact: true },
+    // { path: "/opab_calendar", component: NotFound, exact: true },
     // ОПАБ Видео
     { path: "/opab_video", component: OpabVideos, exact: true },
     // Остальное
@@ -45,11 +46,11 @@ const App: React.FC = () => {
     // Новости/статьи
     { path: "/news_articles", component: NewsArticles, exact: true },
     // Страница статьи
-    { path: "/articles", component: NotFound, exact: true },
+    // { path: "/articles", component: NotFound, exact: true },
     // Отзывы
     { path: "/feedbacks", component: Feedbacks, exact: true },
     // Контакты
-    { path: "/contacts", component: NotFound, exact: true },
+    // { path: "/contacts", component: NotFound, exact: true },
     // 404
     { path: "*", component: NotFound, exact: true },
   ];

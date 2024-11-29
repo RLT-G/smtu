@@ -1,0 +1,32 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+}
+.AlfBtn{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.letterBtn{
+    border: none;
+    background-color: transparent;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437C;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.letterBtn:hover{
+    color: #00AEEF;
+}
+.Catalog{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}

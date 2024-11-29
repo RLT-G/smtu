@@ -1,0 +1,27 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: calc((100% - 40px) / 3);
+    min-width: calc((100% - 40px) / 3);
+    align-items: start;
+    min-height: 157px;
+}
+.Letter{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #01437C;
+}
+.fio{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #01437C;
+    transition: 0.2s;
+    cursor: pointer;
+}
+.fio:hover{
+    color: #00AEEF;
+}

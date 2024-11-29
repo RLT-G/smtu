@@ -1,0 +1,18 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 120px 200px;
+    align-items: center;
+}
+.Title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #01437C;
+    margin-bottom: 60px;
+    align-self: flex-start;
+}
+.Button{
+    width: 386px;
+    height: 74px;
+}

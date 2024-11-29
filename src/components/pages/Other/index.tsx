@@ -18,7 +18,7 @@ const Other: React.FC = () => {
                     {persons.items.slice(0, 9).map(({ id, fio, rank, photo }, index) => 
                         <PersonItem key={index} id={id} fio={fio} rank={rank} photo={photo}/>)}
                 </div>
-                <Button className={classes.Button} onClick={() => {}}>Полный Каталог</Button>
+                <Button className={classes.Button} onClick={() => {}}>Каталог</Button>
             </div>
             <Footer />
         </>
