@@ -1,0 +1,112 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 120px 200px;
+}
+.Title, .Title2, .firstText, .secondText, .LinkCheckbox, .LabelForCheckbox{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+}
+.Title{
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 80px;
+}
+.Title2{
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.TextForm{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.blablabla{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+.Form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 20px;
+}
+.firstText{
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    margin-bottom: 40px;
+}
+.secondText{
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.InputTextArea{
+    height: 250px;
+}
+.InputText, .InputTextArea{
+    border: none;
+    background-color: transparent;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437C;
+    transition: 0.2s;
+    width: 100%;
+    border: 2px solid #01437C;
+    padding: 20px 30px;
+    width: 100%;
+}
+
+.InputText::placeholder, .InputTextArea::placeholder{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437C;
+    opacity: 40%;
+    transition: 0.2s;
+}
+.CheckboxWrapper{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.LabelForCheckbox{
+    font-weight: 300;
+    font-size: 12px;
+}
+.LinkCheckbox{
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: #00AEEF;
+    cursor: pointer;
+}
+.Checkbox{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    width: 20px; height: 20px;
+    border: 2px solid #01437C;
+    transition: 0.2s;
+}
+.Checkbox.Active{
+    background-color: #00AEEF;
+}
+.FormBtn{
+    width: 215px;
+height: 47px;
+
+}

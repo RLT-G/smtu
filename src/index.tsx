@@ -13,6 +13,7 @@ import Person from "./components/pages/Person";
 import Other from "./components/pages/Other";
 import Catalog from "./components/pages/Catalog";
 import FacultiesDetail from "./components/pages/FacultiesDetail";
+import Contacts from "./components/pages/Contacts";
 
 interface RouteConfig {
   path: string;
@@ -51,7 +52,7 @@ const App: React.FC = () => {
     // Отзывы
     { path: "/feedbacks", component: Feedbacks, exact: true },
     // Контакты
-    // { path: "/contacts", component: NotFound, exact: true },
+    { path: "/contacts", component: Contacts, exact: true },
     // 404
     { path: "*", component: NotFound, exact: true },
   ];
