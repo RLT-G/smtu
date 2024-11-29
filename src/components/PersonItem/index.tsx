@@ -1,5 +1,6 @@
 import React, { CSSProperties } from "react";
 import classes from './index.module.css'
+import { Navigate, useNavigate } from "react-router-dom";
 
 interface IPersonItem {
     id: number;
@@ -10,8 +11,10 @@ interface IPersonItem {
 }
 
 const PersonItem: React.FC<IPersonItem> = ({ id, fio, rank, photo, className }) => {
+    const navigate = useNavigate()
+
     return (
-        <div className={[classes.Wrapper, className].join(' ')} onClick={() => {}}>
+        <div className={[classes.Wrapper, className].join(' ')} onClick={() => {navigate(`/person?person_id=${id}`)}}>
             <div className={classes.Ico} style={{
                 background: `url(${photo}) no-repeat`,
                 backgroundSize: 'cover'

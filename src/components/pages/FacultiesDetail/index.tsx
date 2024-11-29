@@ -6,10 +6,23 @@ import faculties from '../../../faculties.json';
 import Button from "../../ui/Button";
 import persons from '../../../persons.json'
 import PersonItem from "../../PersonItem";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const FacultiesDetail: React.FC = () => {
-    const [facultet, setFacultet] = useState<string>('kio') // {kio kaia cpt ia mp eigo}
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const navigate = useNavigate()
+    const get_init_f = (): string => {
+        const f = params.get('f');
+        if (f && ['kio', 'kaia', 'cpt', 'ia', 'mp', 'eigo'].includes(f)) {
+            return f
+        }
+        return 'kio'
+    }
+
+
+    const [facultet, setFacultet] = useState<string>(get_init_f()) // {kio kaia cpt ia mp eigo}
     const titles = {
         kio: 'Факультет кораблестроения и океанотехники', 
         kaia: 'Корабельной энергетики и автоматики', 
@@ -78,7 +91,7 @@ const FacultiesDetail: React.FC = () => {
                 </div>
                 <div className={classes.Personality}>
                     <span className={classes.PersonalityTitle}>Персоналии</span>
-                    <Button className={classes.PersonalityBtn} onClick={() => {}}>посмотреть всех</Button>
+                    <Button className={classes.PersonalityBtn} onClick={() => {navigate('/other')}}>посмотреть всех</Button>
                 </div>
                 <div className={classes.PersonsContainer}>
                     {getPersonsViaF().slice(0, 3).map(([id, fio, rank, photo, faculty]) => <PersonItem id={id} fio={fio} rank={rank} photo={photo}/>)}

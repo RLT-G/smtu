@@ -2,6 +2,7 @@ import React from "react";
 import classes from './index.module.css'
 import DropDownMenu from "../ui/DropDownMenu";
 import HeaderDropMenu from "../HeaderDropMenu";
+import { useNavigate } from "react-router-dom";
 
 
 interface IMenuItem {
@@ -11,27 +12,30 @@ interface IMenuItem {
 
 
 const SecondHeader: React.FC = () => {
+    const navigate = useNavigate()
+    
     const opabItems: Array<IMenuItem> = [
-        { text: 'История', onClick: () => {console.log('История в вкл')} },
-        { text: 'календарь событий', onClick: () => {console.log('календ в вкл')} },
-        { text: 'участники', onClick: () => {console.log('участники в вкл')} },
-        { text: 'видеопроект', onClick: () => {console.log('видеопроект в вкл')} },
+        { text: 'История', onClick: () => {navigate('/history')} },
+        { text: 'календарь событий', onClick: () => {navigate('/opab_calendar')} },
+        { text: 'участники', onClick: () => {navigate('/opab')} },
+        { text: 'видеопроект', onClick: () => {navigate('/opab_video')} },
     ]
 
     const fuckItems: Array<IMenuItem> = [
-        { text: 'Кораблестроения и океанотехники', onClick: () => {console.log('океан')} },
-        { text: 'корабельной энергетики и автоматики', onClick: () => {console.log('энерг')} },
-        { text: 'морского приборостроения ', onClick: () => {console.log('приб')} },
-        { text: 'Инженерно-экономический', onClick: () => {console.log('инжир')} },
-        { text: 'цифровых промышленных технологий', onClick: () => {console.log('цифра')} },
-        { text: 'естественнонаучного и гуманитарного образования', onClick: () => {console.log('ест')} },
+        { text: 'Кораблестроения и океанотехники', onClick: () => {navigate('/faculties_detail?f=kio')} },
+        { text: 'корабельной энергетики и автоматики', onClick: () => {navigate('/faculties_detail?f=kaia')} },
+        { text: 'морского приборостроения ', onClick: () => {navigate('/faculties_detail?f=mp')} },
+        { text: 'Инженерно-экономический', onClick: () => {navigate('/faculties_detail?f=ia')} },
+        { text: 'цифровых промышленных технологий', onClick: () => {navigate('/faculties_detail?f=cpt')} },
+        { text: 'естественнонаучного и гуманитарного образования', onClick: () => {navigate('/faculties_detail?f=eigo')} },
     ]
 
     return (
         <div className={classes.HeaderWrapper}>
             <div className={classes.HeaderTop}>
 
-                <div className={classes.LogoAndText}>
+                <div className={classes.LogoAndText}
+                    onClick={() => {navigate('/')}}>
                     <div className={classes.Logo}></div>
                     <div className={classes.Text}>
                         <span className={classes.Title}>Память Корабелки</span>
@@ -41,29 +45,29 @@ const SecondHeader: React.FC = () => {
 
                 <div className={classes.NavBar}>
                     <button className={classes.goToOPAB}
-                        onClick={() => {console.log('опаб')}}
+                        onClick={() => {navigate('/opab')}}
                     >264-й ОПАБ</button>
                     <button className={classes.gotToHistory}
-                        onClick={() => {console.log('истор')}}
+                        onClick={() => {navigate('/history')}}
                     >История</button>
                     <button className={classes.goToPersonalities}
-                        onClick={() => {console.log('персоны')}}
+                        onClick={() => {navigate('/other')}}
                     >Персоналии</button>
                     <button className={classes.goToContacts}
-                        onClick={() => {console.log('контакт')}}
+                        onClick={() => {navigate('/contacts')}}
                     >контакты</button>
                     <button className={classes.goToFeedbacks}
-                        onClick={() => {console.log('отзывы')}}
+                        onClick={() => {navigate('/feedbacks')}}
                     >отзывы</button>
                     <button className={classes.Search}
-                        onClick={() => {console.log('поиск')}}
+                        onClick={() => {}}
                     ></button>
                 </div>
 
             </div>
             <div className={classes.HeaderDown}>
                 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {console.log('герои снизу')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
                     <span className={classes.DownNavBarText}>герои</span>
                 </DropDownMenu>
 
@@ -77,15 +81,15 @@ const SecondHeader: React.FC = () => {
                     <span className={classes.DownNavBarText}>факультеты</span>
                 </DropDownMenu>
 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {console.log('студенты снизу')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
                     <span className={classes.DownNavBarText}>студенты</span>
                 </DropDownMenu>
 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {console.log('препод снизу')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
                     <span className={classes.DownNavBarText}>преподаватели</span>
                 </DropDownMenu>
 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {console.log('выпускн снизу')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
                     <span className={classes.DownNavBarText}>выпускники</span>
                 </DropDownMenu>
             </div>

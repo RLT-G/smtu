@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './index.module.css'
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import persons from "../../../persons.json";
@@ -12,7 +12,7 @@ import PersonItem from "../../PersonItem";
 const Person: React.FC = () => {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
-
+    const navigate = useNavigate()
     const get_person_id = (): number => {
         const person_id = Number(params.get('person_id'));
         if (person_id >= persons.items.length) {
@@ -61,7 +61,7 @@ const Person: React.FC = () => {
                 <div className={classes.RecommendedWrapper}>
                     <span className={classes.RecommendedTitle}>Рекомендации</span>
                     <Button className={classes.RecommendedButton}
-                        onClick={() => {}}>
+                        onClick={() => {navigate('/other')}}>
                         посмотреть всех
                     </Button>
                 </div>

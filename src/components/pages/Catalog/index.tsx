@@ -5,8 +5,10 @@ import Footer from "../../Footer";
 import persons from '../../../persons.json'
 import InnerCatalog from "../../InnerCatalog";
 import Button from "../../ui/Button";
+import { useNavigate } from "react-router-dom";
 
 const Catalog: React.FC = () => {
+    const navigate = useNavigate()
     const getFios = (): Array<[string, number]> => {
         let fios: Array<[string, number]> = []
         persons.items.forEach((person) => {
@@ -21,7 +23,7 @@ const Catalog: React.FC = () => {
                 <span className={classes.Title}>Алфавитный каталог</span>
                 <InnerCatalog fios={getFios()}/>
                 <Button className={classes.Button}
-                    onClick={() => {}}>полный каталог</Button>
+                    onClick={() => {navigate('/other')}}>полный каталог</Button>
             </div>
             <Footer />
         </>

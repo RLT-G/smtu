@@ -1,31 +1,34 @@
 import React from "react";
 import classes from './index.module.css'
+import { useNavigate } from "react-router-dom";
 
 interface IFirstHeader {
     fScroll?: () => void
 }
 
 const FirstHeader: React.FC<IFirstHeader> = ({ fScroll }) => {
+    const navigate = useNavigate()
+
     return (
         <div className={classes.HeaderWrapper}>
             <div className={classes.NavBar}>
                 <button className={classes.goToOPAB}
-                    onClick={() => {console.log('опаб')}}
+                    onClick={() => {navigate('/opab')}}
                 >264-й ОПАБ</button>
                 <button className={classes.gotToHistory}
-                    onClick={() => {console.log('история')}}
+                    onClick={() => {navigate('/history')}}
                 >История</button>
                 <button className={classes.goToPersonalities}
-                    onClick={() => {console.log('персоны')}}
+                    onClick={() => {navigate('/other')}}
                 >Персоналии</button>
                 <button className={classes.goToContacts}
-                    onClick={() => {console.log('контактыф')}}
+                    onClick={() => {navigate('/contacts')}}
                 >контакты</button>
                 <button className={classes.goToFeedbacks}
-                    onClick={() => {console.log('отзывы')}}
+                    onClick={() => {navigate('/feedbacks')}}
                 >отзывы</button>
                 <button className={classes.Search}
-                    onClick={() => {console.log('посик')}}
+                    onClick={() => {}}
                 ></button>
             </div>
             <div className={classes.MainText}>
