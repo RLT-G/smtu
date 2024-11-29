@@ -3,6 +3,8 @@ import classes from './index.module.css';
 import Header from "../../Header";
 import Footer from "../../Footer";
 import Button from "../../ui/Button";
+import SquareLinkText from "../../SquareLinkText";
+import AboutCart from "../../AboutCart";
 
 
 const Contacts: React.FC = () => {
@@ -42,6 +44,11 @@ const Contacts: React.FC = () => {
                             setAgree(false);setEmail('');setMsg('');setName('');setNumberphone('')
                         }}>Отправить</Button>
                     </div>
+                </div>
+                <div className={classes.AboutWrapper}>
+                    <AboutCart />
+                    <AboutCart />
+                    <AboutCart />
                 </div>
             </div>
             <Footer />

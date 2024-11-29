@@ -22,6 +22,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 120px;
 }
 .blablabla{
     display: flex;
@@ -109,4 +110,10 @@
     width: 215px;
 height: 47px;
 
+}
+.AboutWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
