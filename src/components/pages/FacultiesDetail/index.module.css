@@ -1,0 +1,94 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 60px 200px 120px 200px;
+    width: 100%;
+}
+.TabsSelector{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 120px;
+}
+.TabsBtn{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437C;
+    border-bottom: #01437C dashed 1px;
+    transition: 0.2s;
+}
+.TabsBtn:hover{
+    border-bottom: #00AEEF solid 1px;
+}
+.TabsBtn.Active{
+    color: #00AEEF;
+    border-bottom: #00AEEF solid 1px;
+}
+.Title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 64px;
+    color: #01437C;
+    max-width: 1000px;
+    margin-bottom: 60px;
+}
+.FTextAndPhoto{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+.Photo{
+    width: 508px;
+    height: 368px;
+    position: relative;
+}
+.Photo::after{
+    content: '';
+    display: block;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    border: 3px solid #01437C;
+}
+.Text{
+    width: 50%;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 140%;
+    color: #01437C;
+}
+.Personality{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.PersonalityTitle{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #01437C;
+}
+.PersonalityBtn{
+    width: 274px;
+    height: 47px;
+    padding: 15px 30px;
+}
+.PersonsContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

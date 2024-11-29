@@ -12,6 +12,7 @@ import Feedbacks from "./components/pages/Feedbacks";
 import Person from "./components/pages/Person";
 import Other from "./components/pages/Other";
 import Catalog from "./components/pages/Catalog";
+import FacultiesDetail from "./components/pages/FacultiesDetail";
 
 interface RouteConfig {
   path: string;
@@ -34,7 +35,7 @@ const App: React.FC = () => {
     // Факультеты общая
     { path: "/faculties", component: Faculties, exact: true },
     // Факультеты Разделы
-    // { path: "/faculties_detail", component: NotFound, exact: true },
+    { path: "/faculties_detail", component: FacultiesDetail, exact: true },
     // Раздел ОПАБ
     // { path: "/opab", component: NotFound, exact: true },
     // ОПАБ календарь
