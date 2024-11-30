@@ -1,0 +1,9 @@
+.Wrapper{
+    width: 895px;
+    height: 413px;
+    display: flex;
+}
+.Photo{
+    width: 100%;
+    height: 100%;
+}

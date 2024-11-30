@@ -1,0 +1,46 @@
+.Wrapper{
+    width: 895px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.Photo{
+    width: 895px;
+    height: 603px;
+}
+.Wrapper2{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.Caption{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+    font-weight: 300;
+    font-size: 12px;
+}
+.Arrows{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.ArrowLeft, .ArrowRight{
+    width: 52px;
+    height: 24px;
+    background: url(../../../assets/img/arrowdefault.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+.ArrowLeft:hover, .ArrowRight:hover{
+    background: url(../../../assets/img/arrowhover.svg) no-repeat;
+}
+.ArrowLeft{
+    transform: rotate(180deg);
+}
+.ArrowRight{
+    position: relative;
+    top: -1px;
+}

@@ -1,0 +1,17 @@
+.Wrapper{
+    width: 793px;
+    display: flex;
+    text-align: start;
+    padding-left: 20px;
+    border-left: 1px solid #00AEEF;
+}
+.text{
+    text-align: start;
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+}

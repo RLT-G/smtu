@@ -15,6 +15,7 @@ import Catalog from "./components/pages/Catalog";
 import FacultiesDetail from "./components/pages/FacultiesDetail";
 import Contacts from "./components/pages/Contacts";
 import ScrollToTop from "./components/ScrollToTop";
+import Articles from "./components/pages/Articles";
 
 interface RouteConfig {
   path: string;
@@ -49,7 +50,7 @@ const App: React.FC = () => {
     // Новости/статьи
     { path: "/news_articles", component: NewsArticles, exact: true },
     // Страница статьи
-    // { path: "/articles", component: NotFound, exact: true },
+    { path: "/articles", component: Articles, exact: true },
     // Отзывы
     { path: "/feedbacks", component: Feedbacks, exact: true },
     // Контакты

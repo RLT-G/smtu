@@ -1,0 +1,12 @@
+.Wrapper{
+    width: 895px;
+    display: flex;
+    text-align: start;
+}
+.Title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #01437C;
+    text-align: start;    
+}

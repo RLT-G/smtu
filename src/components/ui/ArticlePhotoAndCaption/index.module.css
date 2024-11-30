@@ -1,0 +1,17 @@
+.Wrapper{
+    width: 895px;
+    height: 603px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.Photo{
+    width: 100%;
+    height: 100%;
+}
+.Text{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+    font-weight: 300;
+    font-size: 12px;
+}
