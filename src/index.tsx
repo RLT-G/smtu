@@ -14,6 +14,7 @@ import Other from "./components/pages/Other";
 import Catalog from "./components/pages/Catalog";
 import FacultiesDetail from "./components/pages/FacultiesDetail";
 import Contacts from "./components/pages/Contacts";
+import ScrollToTop from "./components/ScrollToTop";
 
 interface RouteConfig {
   path: string;
@@ -60,6 +61,7 @@ const App: React.FC = () => {
   return (
     <authContext.Provider value={{ isAuth, setIsAuth }}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           {routes.map(({ path, component: Component, exact }, index) => (
             <Route key={index} path={path} element={<Component />} />

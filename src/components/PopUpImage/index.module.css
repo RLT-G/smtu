@@ -1,0 +1,34 @@
+.Wrapper{
+    width: 800px;
+    height: 662px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.PhotoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 610px;
+    background-color: #d9d9d9;
+}
+.PhotoCaption{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 140%;
+    letter-spacing: 0.02em;
+    color: #FFF;
+    text-align: center;
+}
+.Photo{
+    max-height: 610px;
+}
+.CloseSvg{
+    position: absolute;
+    top: 0;
+    right: -25px;
+    cursor: pointer;
+    transition: 0.2s;
+}

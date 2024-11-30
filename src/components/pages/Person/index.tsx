@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classes from './index.module.css'
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from "../../Header";
@@ -8,8 +8,14 @@ import SquareLinkText from "../../SquareLinkText";
 import PersonData from "../../PersonData";
 import Button from "../../ui/Button";
 import PersonItem from "../../PersonItem";
+import PopUpWrapper from "../../PopUpWrapper";
+import PopUpImage from "../../PopUpImage";
 
 const Person: React.FC = () => {
+    const [popUpIsOpen, setPopUpIsOpen] = useState<boolean>(false)
+    const closePopUp = (): void => {
+        setPopUpIsOpen(false)
+    }
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const navigate = useNavigate()
@@ -23,6 +29,12 @@ const Person: React.FC = () => {
     const person_id = get_person_id()
     return (
         <>
+            {popUpIsOpen && <PopUpWrapper closePopUp={closePopUp}>
+                <PopUpImage photoUrl={persons.items.find(({ id }) => id === person_id)?.photo}
+                    photoCaption={persons.items.find(({ id }) => id === person_id)?.fio}
+                    closePopUp={closePopUp}/>
+            </PopUpWrapper>}
+
             <Header isMainPage={false}/>
             <div className={classes.Wrapper}>
                 <div className={classes.Person}>
@@ -43,11 +55,10 @@ const Person: React.FC = () => {
                         </div>
                     </div>
                     <SquareLinkText className={classes.PersonPhoto}
-                        style={
-                            {
-                                background: `url(${persons.items.find(({ id }) => id === person_id)?.photo}) no-repeat`,
-                                backgroundSize: 'cover'
-                            }}
+                        onClick={() => {setPopUpIsOpen(true)}}
+                        style={{
+                            background: `url(${persons.items.find(({ id }) => id === person_id)?.photo}) no-repeat center/cover`
+                        }}
                     ></SquareLinkText>
                 </div>
                 <PersonData 
@@ -66,7 +77,7 @@ const Person: React.FC = () => {
                     </Button>
                 </div>
                 <div className={classes.RecommendedPersonWrapper}>
-                    {persons.items.slice(0, 3).map(({ id, fio, rank, photo }) => <PersonItem className={classes.PersonCart} id={id} fio={fio} rank={rank} photo={photo}/>)}
+                    {persons.items.slice(0, 3).map(({ id, fio, rank, photo }, index) => <PersonItem className={classes.PersonCart} id={id} fio={fio} rank={rank} photo={photo} key={index}/>)}
                 </div>
             </div>
             <Footer />
