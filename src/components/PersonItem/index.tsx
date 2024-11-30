@@ -16,8 +16,7 @@ const PersonItem: React.FC<IPersonItem> = ({ id, fio, rank, photo, className }) 
     return (
         <div className={[classes.Wrapper, className].join(' ')} onClick={() => {navigate(`/person?person_id=${id}`)}}>
             <div className={classes.Ico} style={{
-                background: `url(${photo}) no-repeat`,
-                backgroundSize: 'cover'
+                background: `url(${photo}) no-repeat center/cover`
             }}></div>
 
             <div className={classes.TextContent}>

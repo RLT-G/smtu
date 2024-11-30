@@ -67,7 +67,7 @@ const SecondHeader: React.FC = () => {
             </div>
             <div className={classes.HeaderDown}>
                 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other?filter=hero')}}>
                     <span className={classes.DownNavBarText}>герои</span>
                 </DropDownMenu>
 
@@ -81,15 +81,15 @@ const SecondHeader: React.FC = () => {
                     <span className={classes.DownNavBarText}>факультеты</span>
                 </DropDownMenu>
 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other?filter=students')}}>
                     <span className={classes.DownNavBarText}>студенты</span>
                 </DropDownMenu>
 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other?filter=teacher')}}>
                     <span className={classes.DownNavBarText}>преподаватели</span>
                 </DropDownMenu>
 
-                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other')}}>
+                <DropDownMenu className={classes.DownNavBarItem} dropElement={<></>} onClick={() => {navigate('/other?filter=graduation')}}>
                     <span className={classes.DownNavBarText}>выпускники</span>
                 </DropDownMenu>
             </div>

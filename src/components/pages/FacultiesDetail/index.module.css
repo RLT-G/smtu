@@ -51,6 +51,7 @@
     width: 508px;
     height: 368px;
     position: relative;
+    cursor: pointer;
 }
 .Photo::after{
     content: '';
@@ -61,6 +62,10 @@
     top: 15px;
     left: 15px;
     border: 3px solid #01437C;
+    transition: 0.2s;
+}
+.Photo:hover::after{
+    border: 3px solid #00AEEF;
 }
 .Text{
     width: 50%;

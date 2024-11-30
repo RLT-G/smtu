@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import classes from './index.module.css';
 import Header from "../../Header";
 import Footer from "../../Footer";
@@ -7,6 +7,8 @@ import Button from "../../ui/Button";
 import persons from '../../../persons.json'
 import PersonItem from "../../PersonItem";
 import { useLocation, useNavigate } from "react-router-dom";
+import PopUpWrapper from "../../PopUpWrapper";
+import PopUpImage from "../../PopUpImage";
 
 
 const FacultiesDetail: React.FC = () => {
@@ -40,7 +42,32 @@ const FacultiesDetail: React.FC = () => {
         })
         return result
     }
-
+    const [facultetPhoto, setFacultetPhoto] = useState<string>(faculties.kio.photo)
+    const [facultetTitle, setFacultetTitle] = useState<string>(titles.kio)
+    useEffect(() => {
+        if (facultet === 'kio') {
+            setFacultetPhoto(faculties.kio.photo)
+            setFacultetTitle(titles.kio)
+        } else if (facultet === 'kaia') {
+            setFacultetPhoto(faculties.kaia.photo)
+            setFacultetTitle(titles.kaia)
+        } else if (facultet === 'cpt') {
+            setFacultetPhoto(faculties.cpt.photo)
+            setFacultetTitle(titles.cpt)
+        } else if (facultet === 'ia') {
+            setFacultetPhoto(faculties.ia.photo)
+            setFacultetTitle(titles.ia)
+        } else if (facultet === 'mp') {
+            setFacultetPhoto(faculties.mp.photo)
+            setFacultetTitle(titles.mp)
+        } else if (facultet === 'eigo') {
+            setFacultetPhoto(faculties.eigo.photo)
+            setFacultetTitle(titles.eigo)
+        }
+    }, [facultet])
+    const [popUpIsOpen, setPopUpIsOpen] = useState<boolean>(false)
+    const openPopUp = (): void => { setPopUpIsOpen(true) }
+    const closePopUp = (): void => { setPopUpIsOpen(false) }
     return (
         <>
             <Header isMainPage={false}/>
@@ -82,16 +109,18 @@ const FacultiesDetail: React.FC = () => {
                         {facultet === 'mp' && faculties.mp.text}
                         {facultet === 'eigo' && faculties.eigo.text}
                     </span>
+                    {popUpIsOpen && <PopUpWrapper closePopUp={closePopUp}>
+                        <PopUpImage photoUrl={facultetPhoto} closePopUp={closePopUp} photoCaption={facultetTitle}/>
+                    </PopUpWrapper>}
                     <div className={classes.Photo} style={{
-                        background: `url(${faculties.kio.photo}) no-repeat`,
-                        backgroundSize: 'cover'
-                    }}>
-
+                        background: `url(${facultetPhoto}) no-repeat center/cover`,
+                    }} onClick={openPopUp}>
+                    
                     </div>
                 </div>
                 <div className={classes.Personality}>
                     <span className={classes.PersonalityTitle}>Персоналии</span>
-                    <Button className={classes.PersonalityBtn} onClick={() => {navigate('/other')}}>посмотреть всех</Button>
+                    <Button className={classes.PersonalityBtn} onClick={() => {navigate(`/other?filter=${facultet}`)}}>посмотреть всех</Button>
                 </div>
                 <div className={classes.PersonsContainer}>
                     {getPersonsViaF().slice(0, 3).map(([id, fio, rank, photo, faculty]) => <PersonItem id={id} fio={fio} rank={rank} photo={photo}/>)}

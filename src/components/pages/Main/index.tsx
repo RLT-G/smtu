@@ -21,10 +21,10 @@ const Main: React.FC = () => {
             <div className={classes.Wrapper} ref={contentRef}>
                 <div className={[classes.Part, classes.Part1].join(' ')}>
                      <div className={classes.Left}>
-                        <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/other')}}>Герои</SquareLinkText>
+                        <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/other?filter=hero')}}>Герои</SquareLinkText>
                         <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/faculties')}}>факультеты</SquareLinkText>
-                        <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/other')}}>студенты</SquareLinkText>
-                        <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/other')}}>выпускники</SquareLinkText>
+                        <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/other?filter=students')}}>студенты</SquareLinkText>
+                        <SquareLinkText className={classes.Part1LeftLink} onClick={() => {navigatee('/other?filter=graduation')}}>выпускники</SquareLinkText>
 
                      </div>
                      <div className={classes.Right}>
@@ -41,7 +41,7 @@ const Main: React.FC = () => {
                 <div className={[classes.Part, classes.Part3].join(' ')}>
                     <SquareLinkText className={classes.Part3Left} onClick={() => {navigatee('/catalog')}}>алфавитный каталог</SquareLinkText>
                     <div className={classes.Part3Right}>
-                        <SquareLinkText className={classes.Part3RightItem1} onClick={() => {navigatee('/other')}}>преподаватели</SquareLinkText>
+                        <SquareLinkText className={classes.Part3RightItem1} onClick={() => {navigatee('/other?filter=teacher')}}>преподаватели</SquareLinkText>
                         <SquareText className={classes.Part3RightItem2}>
                         Многие пали смертью храбрых. Многие имена невозможно восстановить. Но мы всегда будем помнить защитников, героев, молодых ребят, отдавших за нас свои жизни.
                         <br />Солдат умирает — когда о нём забывают. Мы — не забудем!

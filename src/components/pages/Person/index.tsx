@@ -27,7 +27,7 @@ const Person: React.FC = () => {
     const navigate = useNavigate()
     const get_person_id = (): number => {
         const person_id = Number(params.get('person_id'));
-        if (person_id >= persons.items.length) {
+        if (person_id >= persons.items.length || !person_id) {
             return 1
         }
         return person_id
