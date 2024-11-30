@@ -16,6 +16,12 @@ const Person: React.FC = () => {
     const closePopUp = (): void => {
         setPopUpIsOpen(false)
     }
+    const scrollUp = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const navigate = useNavigate()
@@ -27,6 +33,7 @@ const Person: React.FC = () => {
         return person_id
     }
     const person_id = get_person_id()
+    scrollUp()
     return (
         <>
             {popUpIsOpen && <PopUpWrapper closePopUp={closePopUp}>

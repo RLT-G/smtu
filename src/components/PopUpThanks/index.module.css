@@ -1,0 +1,30 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    padding: 50px;
+    position: relative;
+    background-color: #d9d9d9;
+}
+.Text1{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+
+    font-weight: 500;
+    font-size: 40px;
+    text-align: center;
+}
+.Text2{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+
+    font-weight: 300;
+    font-size: 20px;
+    text-align: center;
+}
+.Close{
+    position: absolute;
+    top: 0;
+    right: -25px;
+    cursor: pointer;
+}
