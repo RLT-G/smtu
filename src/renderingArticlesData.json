@@ -5,65 +5,6 @@
             "page": [
                 {
                     "type": "title",
-                    "content": " Текст для заголовка статьи "
-                },
-                {
-                    "type": "photo",
-                    "content": "url фотки"
-                },
-                {
-                    "type": "text",
-                    "content": " Текст "
-                },
-                {
-                    "type": "subtitle",
-                    "content": " Текст для подзаголовка"
-                },
-                {
-                    "type": "photo_carousel",
-                    "content": [
-                        [" url для 1й фотки ", " Подпись для фотки "],
-                        [" url для 2й фотки ", " Подпись для фотки "],
-                        [" url для Nй фотки ", " Подпись для фотки "]
-                    ]
-                },
-                {
-                    "type": "quote",
-                    "content": " Текст для цитаты "
-                },
-                {
-                    "type": "photo_and_text",
-                    "content": {
-                        "text": " текст ",
-                        "photo": " url фотки ",
-                        "caption": " Подпись для фотки "
-                    }
-                },
-                {
-                    "type": "photo_and_text",
-                    "content": {
-                        "text": " текст ",
-                        "photo": " url фотки ",
-                        "caption": " Подпись для фотки "
-                    }
-                },
-                {
-                    "type": "photo_and_caption",
-                    "content": [
-                        " url для фотки ",
-                        " подпись к фото "
-                    ]
-                }
-            ],
-            "author": " Автор ",
-            "time": " Время прочтения ",
-            "source": "Источник"
-        },
-        {
-            "id": 2,
-            "page": [
-                {
-                    "type": "title",
                     "content": "Ленинградский кораблестроительный институт в годы Великой Отечественной войны (1941 — 1945)"
                 },
                 {
@@ -159,6 +100,1422 @@
                         ["https://i.imgur.com/a8jeZIH_d.webp?maxwidth=760&fidelity=grand", "Петергоф. Розовый павильон. Штаб 264-го ОПАБ. Северный фасад. 1958 год. / Автор: Самусенко В. Е. "],
                         ["https://i.imgur.com/xxDpgLz_d.webp?maxwidth=760&fidelity=grand", "Подпись для фотки 2"],
                         ["https://i.imgur.com/XxFFsd8_d.webp?maxwidth=760&fidelity=grand", "Подпись для фотки 3"]
+                    ]
+                }
+            ],
+            "author": "Тряскина Ирина",
+            "time": "30 минут",
+            "source": "Архивы Санкт-Петербурга. Повседневные документы ленинградцев в годы войны и блокады 1941–1945 гг.: Альбом — ЦГА СПб., «Издательство «Арт-Экспресс» — 2020 — 236 с."
+        },
+        {
+            "id": 2,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N2 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 3,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N3 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 4,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N4 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 5,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N5 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 6,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N6 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 7,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N7 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 8,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N8 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 9,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N9 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 10,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N10 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 11,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N11 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 12,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N12 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 13,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N13 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 14,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N14 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 15,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N15 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 16,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N16 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 17,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N17 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 18,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N18 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 19,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N19 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 20,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N20 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 21,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N21 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 22,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N22 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 23,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N23 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 24,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N24 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
+                    ]
+                }
+            ],
+            "author": " Автор ",
+            "time": " Время прочтения ",
+            "source": "Источник"
+        },
+        {
+            "id": 25,
+            "page": [
+                {
+                    "type": "title",
+                    "content": "Заголовок статьи N25 (Редактируйте файл renderingArticlesData.json и article.json для управления статьями)"
+                },
+                {
+                    "type": "photo",
+                    "content": "url фотки"
+                },
+                {
+                    "type": "text",
+                    "content": " Текст "
+                },
+                {
+                    "type": "subtitle",
+                    "content": " Текст для подзаголовка"
+                },
+                {
+                    "type": "photo_carousel",
+                    "content": [
+                        [" url для 1й фотки ", " Подпись для фотки "],
+                        [" url для 2й фотки ", " Подпись для фотки "],
+                        [" url для Nй фотки ", " Подпись для фотки "]
+                    ]
+                },
+                {
+                    "type": "quote",
+                    "content": " Текст для цитаты "
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_text",
+                    "content": {
+                        "text": " текст ",
+                        "photo": " url фотки ",
+                        "caption": " Подпись для фотки "
+                    }
+                },
+                {
+                    "type": "photo_and_caption",
+                    "content": [
+                        " url для фотки ",
+                        " подпись к фото "
                     ]
                 }
             ],

@@ -6,17 +6,20 @@ import FeedbacksItem from "../FeedbacksItem";
 
 interface INews {
     date: string;
+    id?: number;
     text: string;
     author?: string;
 }
 
 interface IArticle {
+    id?: number;
     date: string;
     text: string;
     author?: string;
 }
 
 interface IFeedbacks {
+    id?: number;
     date: string;
     author: string;
     text: string;
@@ -53,7 +56,7 @@ const Carusel: React.FC<ICarusel> = ({ caruselItems, getCaruselType }) => {
                 getCaruselType() === 'news' 
                 ? caruselItems.map(({ date, text }) => <NewsItem style={{transform: `translateX(${offset}px)`}} date={date} text={text}/>)
                 : getCaruselType() === 'article' 
-                    ?  caruselItems.map(({ date, text }) => <ArticleItem style={{transform: `translateX(${offset}px)`}} date={date} text={text}/>)
+                    ?  caruselItems.map(({ id, date, text }) => <ArticleItem style={{transform: `translateX(${offset}px)`}} id={id} date={date} text={text}/>)
                     :  caruselItems.map(({ date, author, text }) => <FeedbacksItem style={{transform: `translateX(${offset}px)`}} date={date} text={text} author={author}/>)
             }
 

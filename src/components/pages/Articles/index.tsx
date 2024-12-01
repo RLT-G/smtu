@@ -10,7 +10,8 @@ import ArticlePhotoCarousel from "../../ui/ArticlePhotoCarousel";
 import ArticleQuote from "../../ui/ArticleQuote";
 import ArticlePhotoAndText from "../../ui/ArticlePhotoAndText";
 import ArticlePhotoAndCaption from "../../ui/ArticlePhotoAndCaption";
-
+import articles from '../../../article.json';
+import { useLocation } from "react-router-dom";
 
 interface PageContent {
     type: string;
@@ -33,31 +34,58 @@ interface ArticleData {
 
 const Articles: React.FC = () => {
     const articleData: ArticleData = require('../../../renderingArticlesData.json');
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+    const get_article_id = (): number => {
+        const article_id = Number(params.get('article_id'));
+        if (article_id >= articles.items.length || !article_id) {
+            return 1
+        }
+        return article_id
+    }
+    const article_id = get_article_id()
+
     return (
         <>
             <Header isMainPage={false}/>
             <div className={classes.Wrapper}>
-                <ArticleTitle text={articleData.items[1].page[0].content}/>
-                <ArticlePhoto url={articleData.items[1].page[1].content}/>
-                <ArticleText text={articleData.items[1].page[2].content}/>
-                <ArticleSubtitle text={articleData.items[1].page[3].content}/>
-                <ArticleText text={articleData.items[1].page[4].content}/>
-                <ArticlePhotoCarousel data={articleData.items[1].page[5].content}/>
-                <ArticleText text={articleData.items[1].page[6].content}/>
-                <ArticleQuote text={articleData.items[1].page[7].content}/>
-                <ArticleText text={articleData.items[1].page[8].content}/>
-                <ArticlePhotoAndText data={articleData.items[1].page[9].content}/>
-                <ArticleText text={articleData.items[1].page[10].content}/>
-                <ArticleQuote text={articleData.items[1].page[11].content}/>
-                <ArticleSubtitle text={articleData.items[1].page[12].content}/>
-                <ArticleText text={articleData.items[1].page[13].content}/>
-                <ArticleText text={articleData.items[1].page[14].content}/>
-                <ArticleText text={articleData.items[1].page[15].content}/>
-                <ArticlePhotoAndCaption data={articleData.items[1].page[16].content}/>
-                <ArticleText text={articleData.items[1].page[17].content}/>
-                <ArticleText text={articleData.items[1].page[18].content}/>
-                <ArticleQuote text={articleData.items[1].page[19].content}/>
-                <ArticlePhotoCarousel data={articleData.items[1].page[20].content}/>
+                <div className={classes.DateAuthorTime}>
+                    <span className={classes.Date}>{articles.items.find(({ id }) => id === article_id)?.date}</span>
+                    <span className={classes.subTitle}>автор:</span>
+                    <span className={classes.title}>{articleData.items.find(({ id }) => id === article_id)?.author}</span>
+                    <span className={classes.subTitle}>время прочтения:</span>
+                    <span className={classes.title}>{articleData.items.find(({ id }) => id === article_id)?.time}</span>
+                </div>
+                <div className={classes.Source}>
+                    <span className={classes.title}>ИСТОЧНИК:</span>
+                    <span className={classes.subTitle}>{articleData.items.find(({ id }) => id === article_id)?.source}</span>
+                </div>
+                {articleData.items.find(({ id }) => id === article_id)?.page.map((pageElement, index) => {
+                    if (pageElement.type === "title") {
+                        return <ArticleTitle text={pageElement.content}/>
+
+                    } else if (pageElement.type === "photo") {
+                        return <ArticlePhoto url={pageElement.content}/>
+
+                    } else if (pageElement.type === "text") {
+                        return <ArticleText text={pageElement.content}/>
+
+                    }else if (pageElement.type === "subtitle") {
+                        return <ArticleSubtitle text={pageElement.content}/>
+
+                    }else if (pageElement.type === "photo_carousel") {
+                        return <ArticlePhotoCarousel data={pageElement.content}/>
+
+                    }else if (pageElement.type === "quote") {
+                        return <ArticleQuote text={pageElement.content}/>
+
+                    }else if (pageElement.type === "photo_and_text") {
+                        return <ArticlePhotoAndText data={pageElement.content}/>
+
+                    }else if (pageElement.type === "photo_and_caption") {
+                        return <ArticlePhotoAndCaption data={pageElement.content}/>
+                    }
+                })}
             </div>
             <Footer />
         </>
