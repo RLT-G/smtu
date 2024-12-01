@@ -1,0 +1,11 @@
+.Text{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #01437C;
+    position: relative;
+    max-width: 80%;
+    text-align: start;
+}

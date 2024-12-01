@@ -17,6 +17,7 @@ import Contacts from "./components/pages/Contacts";
 import ScrollToTop from "./components/ScrollToTop";
 import Articles from "./components/pages/Articles";
 import History from "./components/pages/History";
+import OpabCalendar from "./components/pages/OpabCalendar";
 
 interface RouteConfig {
   path: string;
@@ -43,7 +44,7 @@ const App: React.FC = () => {
     // Раздел ОПАБ
     // { path: "/opab", component: NotFound, exact: true },
     // ОПАБ календарь
-    // { path: "/opab_calendar", component: NotFound, exact: true },
+    { path: "/opab_calendar", component: OpabCalendar, exact: true },
     // ОПАБ Видео
     { path: "/opab_video", component: OpabVideos, exact: true },
     // Остальное

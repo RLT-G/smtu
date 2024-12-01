@@ -1,0 +1,14 @@
+.Wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.caption{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: #01437c;
+    max-width: 300px;
+    position: relative;
+}
