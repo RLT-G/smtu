@@ -82,7 +82,7 @@ const Articles: React.FC = () => {
                     }else if (pageElement.type === "photo_and_text") {
                         return <ArticlePhotoAndText data={pageElement.content}/>
 
-                    }else if (pageElement.type === "photo_and_caption") {
+                    }else {
                         return <ArticlePhotoAndCaption data={pageElement.content}/>
                     }
                 })}
