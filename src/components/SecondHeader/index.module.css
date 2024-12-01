@@ -15,6 +15,7 @@
 .LogoAndText{
     display: flex;
     gap: 30px;
+    cursor: pointer;
 }
 .Logo{
     width: 60px;

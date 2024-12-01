@@ -1,0 +1,50 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 120px 200px;
+    width: 100%;
+}
+.InnerWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: end;
+    gap: 40px;
+    position: relative;
+}
+.Title, .LeftNavItem, .LeftNavItemDate{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+}
+.Title {
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 60px;
+}
+.LeftNav{
+    position: fixed;
+    top: calc(272px + 120px + 60px);
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: 0.2s;
+}
+.LeftNavItemDate{
+    font-weight: 700;
+    font-size: 40px;
+}
+.LeftNavItem{
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.LeftNavItem:hover{
+    color: #00AEEF;
+}
+.Section{
+    position: relative;
+}

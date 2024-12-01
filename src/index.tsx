@@ -16,6 +16,7 @@ import FacultiesDetail from "./components/pages/FacultiesDetail";
 import Contacts from "./components/pages/Contacts";
 import ScrollToTop from "./components/ScrollToTop";
 import Articles from "./components/pages/Articles";
+import History from "./components/pages/History";
 
 interface RouteConfig {
   path: string;
@@ -32,7 +33,7 @@ const App: React.FC = () => {
     // Страница Персоны
     { path: "/person", component: Person, exact: true },
     // История
-    // { path: "/history", component: NotFound, exact: true },
+    { path: "/history", component: History, exact: true },
     // Каталог
     { path: "/catalog", component: Catalog, exact: true },
     // Факультеты общая
