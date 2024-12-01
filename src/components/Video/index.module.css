@@ -8,6 +8,28 @@
     align-items: center;
     margin-bottom: 120px;
     cursor: pointer;
+    position: relative;
+}
+.Block::after{
+    content: '';
+    display: block;
+    width: calc(100% - 30px);
+    height: calc(100% - 30px);
+    border: 3px solid #01437c;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    transition: 0.2s;
+}
+.Block:hover::after{
+    border-color: #00aeef;;
+}
+.PlayerWrapper::after{
+    display: none;
+}
+.PlayerWrapper:hover:after{
+    display: none;
 }
 .Block:hover .Svg{
     background: url("../../assets/img/Play_2.svg") no-repeat;
@@ -20,6 +42,8 @@
     background-size: cover;
     cursor: pointer;
     transition: 0.2s;
+    position: relative;
+    z-index: 2;
 }
 .Block .Svg:hover{
     background: url("../../assets/img/Play_2.svg") no-repeat;

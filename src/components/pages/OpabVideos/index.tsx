@@ -4,6 +4,16 @@ import Footer from "../../Footer";
 import classes from "./index.module.css";
 import Video from "../../Video";
 
+interface IbuttonContent {
+  scrollTo: number;
+  text: string;
+}
+interface IvideoContent {
+  src: string;
+  caption: string;
+  photo?: string
+}
+
 const OpabVideos: React.FC = () => {
   const [leftNavIndex, setLeftNavIndex] = useState<number>(0)
   const [navIsFixed, setNavIsFixed] = useState<boolean>(false)
@@ -44,6 +54,36 @@ const OpabVideos: React.FC = () => {
     });
   };
 
+  const buttonContent: Array<IbuttonContent> = [
+    { scrollTo: 1250, text: 'глава i' },
+    { scrollTo: 1954, text: 'глава ii' },
+    { scrollTo: 2658, text: 'глава iii' },
+    { scrollTo: 3362, text: 'глава iV' },
+    { scrollTo: 4066, text: 'глава V' },
+    { scrollTo: 4770, text: 'глава Vi' },
+    { scrollTo: 5474, text: 'глава Vii' },
+    { scrollTo: 6178, text: 'глава Viii' },
+    { scrollTo: 6882, text: 'глава iX' },
+    { scrollTo: 7586, text: 'глава X' },
+    { scrollTo: 8290, text: 'глава Xi' },
+    { scrollTo: 8994, text: 'глава Xii' },
+    { scrollTo: 9698, text: 'глава Xiii' },
+  ]
+  const videoContent: Array<IvideoContent> = [
+      { caption: 'Глава I. Вставай, страна огромная!', src: 'https://www.youtube.com/watch?v=w-WsJ6FezlA', photo: 'https://i.ytimg.com/vi/w-WsJ6FezlA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5XOW2v2AQEvftrYnkceJW4Rzorg'},
+      { caption: 'Глава II. Ты записался добровольцем?', src: '', photo: ''},
+      { caption: 'Глава III. Батальон Корабелов сформирован', src: '', photo: ''},
+      { caption: 'Глава IV. Подготовка к боям', src: '', photo: ''},
+      { caption: 'Глава V. Строительство укрепрайона', src: '', photo: ''},
+      { caption: 'Глава VI. Боевой путь третьей роты', src: '', photo: ''},
+      { caption: 'Глава VII. Подвиг Юрия Никитина', src: '', photo: ''},
+      { caption: 'Глава VIII. Подвиг Бориса Потапова', src: '', photo: ''},
+      { caption: 'Глава IX. Боевой путь четвертой роты', src: '', photo: ''},
+      { caption: 'Глава X. Боевой путь первой роты', src: '', photo: ''},
+      { caption: 'Глава XI. Боевой путь второй роты', src: '', photo: ''},
+      { caption: 'Глава XII. Штыковая контратака', src: '', photo: ''},
+      { caption: 'Глава XIII. Последний рубеж', src: '', photo: ''},
+  ]
   return (
     <>
       <Header isMainPage={false} />
@@ -88,46 +128,14 @@ const OpabVideos: React.FC = () => {
           top: `${25 - 1.5 * leftNavIndex}%`,
           left: navIsFixed ? '200px' : '-400px'
         }}>
-          <button className={[classes.NavButton, leftNavIndex === 0 && classes.Active].join(' ')} 
-            onClick={() => {smoothScrollTo(1250)}}>глава i</button>
-          <button className={[classes.NavButton, leftNavIndex === 1 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(1954)}}>глава ii</button>
-          <button className={[classes.NavButton, leftNavIndex === 2 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(2658)}}>глава iii</button>
-          <button className={[classes.NavButton, leftNavIndex === 3 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(3362)}}>глава iV</button>
-          <button className={[classes.NavButton, leftNavIndex === 4 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(4066)}}>глава V</button>
-          <button className={[classes.NavButton, leftNavIndex === 5 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(4770)}}>глава Vi</button>
-          <button className={[classes.NavButton, leftNavIndex === 6 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(5474)}}>глава Vii</button>
-          <button className={[classes.NavButton, leftNavIndex === 7 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(6178)}}>глава Viii</button>
-          <button className={[classes.NavButton, leftNavIndex === 8 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(6882)}}>глава iX</button>
-          <button className={[classes.NavButton, leftNavIndex === 9 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(7586)}}>глава X</button>
-          <button className={[classes.NavButton, leftNavIndex === 10 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(8290)}}>глава Xi</button>
-          <button className={[classes.NavButton, leftNavIndex === 11 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(8994)}}>глава Xii</button>
-          <button className={[classes.NavButton, leftNavIndex === 12 && classes.Active].join(' ')}
-            onClick={() => {smoothScrollTo(9698)}}>глава Xiii</button>
+          {buttonContent.map(({ scrollTo, text }, index) => 
+            <button className={[classes.NavButton, leftNavIndex === index && classes.Active].join(' ')}
+              onClick={() => {smoothScrollTo(scrollTo)}}>{text}</button>)}
         </div>
-        <Video className={classes.Section} src="" caption="Глава I. Вставай, страна огромная!"/>
-        <Video className={classes.Section} src="" caption="Глава II. Ты записался добровольцем?"/>
-        <Video className={classes.Section} src="" caption="Глава III. Батальон Корабелов сформирован"/>
-        <Video className={classes.Section} src="" caption="Глава IV. Подготовка к боям"/>
-        <Video className={classes.Section} src="" caption="Глава V. Строительство укрепрайона"/>
-        <Video className={classes.Section} src="" caption="Глава VI. Боевой путь третьей роты"/>
-        <Video className={classes.Section} src="" caption="Глава VII. Подвиг Юрия Никитина"/>
-        <Video className={classes.Section} src="" caption="Глава VIII. Подвиг Бориса Потапова"/>
-        <Video className={classes.Section} src="" caption="Глава IX. Боевой путь четвертой роты"/>
-        <Video className={classes.Section} src="" caption="Глава X. Боевой путь первой роты"/>
-        <Video className={classes.Section} src="" caption="Глава XI. Боевой путь второй роты"/>
-        <Video className={classes.Section} src="" caption="Глава XII. Штыковая контратака"/>
-        <Video className={classes.Section} src="" caption="Глава XIII. Последний рубеж"/>
+
+        {videoContent.map(({caption, src, photo}) => 
+          <Video className={classes.Section} src={src} caption={caption} photo={photo}/>)}
+
       </div>
       <Footer />
     </>
