@@ -2,16 +2,18 @@ import React from "react";
 import classes from "./index.module.css";
 
 interface IVideo{
-    src: string, 
-    caption: string
+    src: string;
+    caption: string;
+    className?: string;
 }
-const Video: React.FC<IVideo> = ({src, caption}) =>{
+
+const Video: React.FC<IVideo> = ({src, caption, className}) =>{
     return(
         <>
-        <div className={classes.Text}>{caption}</div>
-        <div className={classes.Block}>
-            <div className={classes.Svg}></div>
-        </div>
+            <div className={classes.Text}>{caption}</div>
+            <div className={[classes.Block, className].join(' ')}>
+                <div className={classes.Svg}></div>
+            </div>
         </>
     )
 }

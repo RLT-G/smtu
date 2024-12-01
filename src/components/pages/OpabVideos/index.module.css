@@ -6,6 +6,7 @@
   margin-top: 136px;
   margin-bottom: 136px;
   flex-direction: column;
+  overflow: hidden;
 }
 .HeaderText .Text1 {
   width: 100%;
@@ -151,3 +152,41 @@
     margin-bottom: 20px;
   }
     
+.LeftNav{
+  display: flex;
+  width: 250px;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  position: fixed;
+  top: 1335px;
+  left: 200px;
+  transition: 0.2s;
+}
+.NavButton{
+  border: none;
+  background: transparent;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #01437c;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.NavButton.Active {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #00aeef;
+}
+.NavButton:hover{
+  color: #00aeef;
+}
+
+.Section{
+  position: relative;
+}
