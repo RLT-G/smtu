@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../Header";
 import Footer from "../../Footer";
 import classes from "./index.module.css";
+import Video from "../../Video";
 
 const OpabVideos: React.FC = () => {
   return (
@@ -44,6 +45,19 @@ const OpabVideos: React.FC = () => {
             </div>
           </div>
         </div>
+        <Video src="" caption="Глава I. Вставай, страна огромная!"/>
+        <Video src="" caption="Глава II. Ты записался добровольцем?"/>
+        <Video src="" caption="Глава III. Батальон Корабелов сформирован"/>
+        <Video src="" caption="Глава IV. Подготовка к боям"/>
+        <Video src="" caption="Глава V. Строительство укрепрайона"/>
+        <Video src="" caption="Глава VI. Боевой путь третьей роты"/>
+        <Video src="" caption="Глава VII. Подвиг Юрия Никитина"/>
+        <Video src="" caption="Глава VIII. Подвиг Бориса Потапова"/>
+        <Video src="" caption="Глава IX. Боевой путь четвертой роты"/>
+        <Video src="" caption="Глава X. Боевой путь первой роты"/>
+        <Video src="" caption="Глава XI. Боевой путь второй роты"/>
+        <Video src="" caption="Глава XII. Штыковая контратака"/>
+        <Video src="" caption="Глава XIII. Последний рубеж"/>
       </div>
       <Footer />
     </>

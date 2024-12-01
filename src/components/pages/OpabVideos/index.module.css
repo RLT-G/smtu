@@ -27,6 +27,7 @@
   height: 498px;
   margin-left: 200px;
   flex-direction: column;
+  margin-bottom: 102px;
 }
 .MainText .UpText {
   width: 1200px;

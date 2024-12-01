@@ -1,0 +1,35 @@
+.Block{
+    width: 895px;
+    height: 504px;
+    background-color: #cccccc;
+    margin-left: 505px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 120px;
+    cursor: pointer;
+}
+.Block:hover .Svg{
+    background: url("../../assets/img/Play_2.svg") no-repeat;
+    background-size: cover;
+}
+.Block .Svg{
+    width: 90px;
+    height: 90px;
+    background: url("../../assets/img/Play_1.svg") no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.Block .Svg:hover{
+    background: url("../../assets/img/Play_2.svg") no-repeat;
+    background-size: cover;
+}
+.Text{
+    margin-left: 505px;
+    margin-bottom: 40px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #01437c;
+}
