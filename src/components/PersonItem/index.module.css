@@ -43,6 +43,8 @@
     font-weight: 400;
     font-size: 16px;
     color: #01437C;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .Tags{
     display: flex;
@@ -62,3 +64,18 @@
     text-align: center;
     color: #01437C;
 } */
+
+@media only screen and (max-width: 420px) {
+    .Wrapper{
+        width: 320px;
+        height: 600px;
+        min-width: 320px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .Wrapper{
+        width: 280px;
+        height: 600px;
+        min-width: 280px;
+    }
+}
