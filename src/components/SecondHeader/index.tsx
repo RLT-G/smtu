@@ -5,6 +5,7 @@ import HeaderDropMenu from "../HeaderDropMenu";
 import { useNavigate } from "react-router-dom";
 import PopUpWrapper from "../PopUpWrapper";
 import PopUpSearch from "../PopUpSearch";
+import PopUpMNB from "../PopUpMNB";
 
 
 interface IMenuItem {
@@ -35,13 +36,18 @@ const SecondHeader: React.FC = () => {
     const [needSearch, setNeedSearch] = useState<boolean>(false)
     const openSearch = (): void => { setNeedSearch(true) }
     const closeSearch = (): void => { setNeedSearch(false) }
+    const [MNBIsOpen, setMNBIsOpen] = useState<boolean>(false)
+    const openMNB = (): void => { setMNBIsOpen(true) }
+    const closeMNB = (): void => { setMNBIsOpen(false) }
     
     return (
         <div className={classes.HeaderWrapper}>
             {needSearch && <PopUpWrapper closePopUp={closeSearch}>
                 <PopUpSearch />
             </PopUpWrapper>}
-
+            {MNBIsOpen && <PopUpWrapper closePopUp={closeMNB}>
+                <PopUpMNB PopUpClose={closeMNB} OpenSearch={openSearch}/>
+            </PopUpWrapper>}
             <div className={classes.HeaderTop}>
 
                 <div className={classes.LogoAndText}
@@ -53,6 +59,11 @@ const SecondHeader: React.FC = () => {
                     </div>
                 </div>
 
+                <svg className={classes.MobileNavbar} 
+                    onClick={openMNB}
+                    width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 10H35M5 20H35M5 30H35" stroke="white" stroke-width="3" stroke-linecap="round" />
+                </svg>
                 <div className={classes.NavBar}>
                     <button className={classes.goToOPAB}
                         onClick={() => {navigate('/opab')}}

@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
+    position: relative;
 }
  .container{
     display: flex;
@@ -97,4 +97,75 @@
     background: url(../../assets/img/logofooter.svg) no-repeat;
     background-size: cover;
     cursor: pointer;
+}
+@media only screen and (max-width: 1250px) {
+    .thirt{
+        position: absolute;
+        flex-direction: row;
+        gap: 30px;
+    }
+    .first{
+        position: relative;
+        top: 60px;
+    }
+     .second{
+        position: relative;
+        top: 60px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .top{
+        width: calc(100% - 90px); 
+        margin-left: 15px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .top{
+        flex-direction: column;
+    }
+    .thirt{
+        position: relative;
+        flex-direction: column;
+        gap: none;
+    }
+    .first{
+        position: relative;
+        top: 0;
+    }
+     .second{
+        position: relative;
+        top: 0;
+    }
+    .content{
+        height: auto;
+    }
+    .LogoFooter{
+        margin-bottom: 40px;
+    }
+    .top .right{
+        width: 100%;
+    }
+    .bottom .right{
+        position: relative;
+        top: -20px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .LogoFooter{
+        background: url(../../assets/img/footerlogomobile.svg) no-repeat;
+        background-size: cover;
+        width: 259px;
+        height: 209px;
+    }
+    .top{
+        align-items: center;
+        width: calc(100% - 30px); 
+    }
+    .top .right{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .bottom .right{
+        font-size: 0.5rem;
+    }
 }

@@ -69,3 +69,33 @@
     z-index: 3;
     cursor: pointer;
 }
+@media only screen and (max-width: 410px) {
+    .Wrapper{
+        width: 360px;
+        min-width: 360px;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .Wrapper{
+        width: 340px;
+        min-width: 340px;
+    }
+}
+@media only screen and (max-width: 370px) {
+    .Wrapper{
+        width: 320px;
+        min-width: 320px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .Wrapper{
+        width: 300px;
+        min-width: 300px;
+    }
+}
+@media only screen and (max-width: 330px) {
+    .Wrapper{
+        width: 280px;
+        min-width: 280px;
+    }
+}

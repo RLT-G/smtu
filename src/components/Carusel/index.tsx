@@ -54,10 +54,10 @@ const Carusel: React.FC<ICarusel> = ({ caruselItems, getCaruselType }) => {
         <div className={classes.Wrapper}>
             {
                 getCaruselType() === 'news' 
-                ? caruselItems.map(({ date, text }) => <NewsItem style={{transform: `translateX(${offset}px)`}} date={date} text={text}/>)
+                ? caruselItems.map(({ date, text }, index) => <NewsItem key={index} style={{transform: `translateX(${offset}px)`}} date={date} text={text}/>)
                 : getCaruselType() === 'article' 
-                    ?  caruselItems.map(({ id, date, text }) => <ArticleItem style={{transform: `translateX(${offset}px)`}} id={id} date={date} text={text}/>)
-                    :  caruselItems.map(({ date, author, text }) => <FeedbacksItem style={{transform: `translateX(${offset}px)`}} date={date} text={text} author={author}/>)
+                    ?  caruselItems.map(({ id, date, text }, index) => <ArticleItem key={index} style={{transform: `translateX(${offset}px)`}} id={id} date={date} text={text}/>)
+                    :  caruselItems.map(({ date, author, text }, index) => <FeedbacksItem key={index} style={{transform: `translateX(${offset}px)`}} date={date} text={text} author={author}/>)
             }
 
             <button className={classes.ArrowLeft} disabled={offset + 400 >= 0}

@@ -35,3 +35,43 @@
 .Wrapper:hover .Text{
     color: #00AEEF;
 }
+@media only screen and (max-width: 1300px) {
+    .Text{
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Text{
+        font-size: 28px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Text{
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .Text{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .Text{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .Text{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .Text{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .Text{
+        font-size: 12px;
+    }
+}

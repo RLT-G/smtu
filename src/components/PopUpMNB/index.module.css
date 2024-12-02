@@ -1,0 +1,55 @@
+.Wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+.Button{
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    min-height: 47px;
+    display: flex;
+    justify-content: start;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #00aeef;
+    background-color: #FFF;
+    border-top: none;
+    position: relative;
+}
+.Button.big{
+    min-height: 75px;
+}
+.Button.First{
+    border-top: 3px solid rgba(0, 0, 0, 0.2) ;
+}
+.Button.Inner{
+    justify-content: end;
+    text-align: end;
+}
+.Button.dis::after, .Button.act::after{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    background: url(../../assets/img/mnb-arrow.svg) no-repeat;
+    background-size: cover;
+    right: 0;
+    top: calc(50% - 9px);
+    transition: 0.2s;
+    transform: rotate(180deg);
+}
+.Button.act::after{
+    transform: rotate(0deg);
+}

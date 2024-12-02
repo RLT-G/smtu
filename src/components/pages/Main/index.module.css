@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 120px 200px;
+    overflow: hidden;
 }
 .Part{
     width: 100%;
@@ -19,8 +20,8 @@
     gap: 20px;
 }
 .Part1LeftLink{
-    width: 325px;
-    height: 325px;
+    width: calc((100% - 20px) / 2);
+    aspect-ratio: 1;
     transition: 0.2s;
 }
 .Part1LeftLink:nth-child(1){
@@ -57,12 +58,10 @@
 .Part1 .Right{
     width: 33%;
     max-width: 33%;
-    
 }
 .Part1RightText{
     width: 100%;
-    height: 670px;
-
+    height: 100%;
 }
 
 
@@ -114,4 +113,145 @@
     flex-direction: column;
     gap: 40px;
     position: relative;
+}
+@media only screen and (max-width: 1400px) {
+    .Part1 .Right{
+        max-height: 654px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .Wrapper{
+        padding: 120px 15px;
+    }
+    .Part1 .Right{
+        max-height: none;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .Part1{
+        flex-direction: column;
+    }
+    .Part1 .Left{
+        max-width: none;
+        min-width: none;
+    }
+    .Part1 .Right{
+        width: 100%;
+        max-width: 100%;
+        height: 350px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Part3{
+        /* flex-direction: column; */
+    }
+    .Part3Left{
+        height: 380px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem2{
+        position: relative;
+        width: calc(200% + 30px);
+        left: calc(-100% - 30px);
+    }
+    .Part3Right{
+        width: calc((100% - 30px) / 2);
+        
+    }   
+}
+@media only screen and (max-width: 750px) {
+    .Part2{
+        height: 320px;
+    }
+
+}
+@media only screen and (max-width: 700px) {
+    .Part3Left {
+        height: 300px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 300px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .Part3Left {
+        height: 280px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 280px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .Part3Left {
+        height: 250px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 250px;
+    }
+}
+@media only screen and (max-width: 475px) {
+    .Part3Left {
+        height: 215px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 215px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .Part3Left {
+        height: 190px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 190px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .Part3Left {
+        height: 180px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 180px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .Part3Left {
+        height: 170px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 170px;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .Part3Left {
+        height: 160px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 160px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .Part3Left {
+        height: 150px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .Part3Left {
+        height: 140px;
+        width: calc((100% - 30px) / 2);
+    }
+    .Part3RightItem1{
+        height: 140px;
+    }
 }

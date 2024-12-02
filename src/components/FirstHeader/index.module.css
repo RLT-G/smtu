@@ -80,3 +80,68 @@
     background: url(../../assets/img/arrowDownHover.svg) no-repeat;
     background-size: cover;
 }
+.MobileNavbar{
+    display: none;
+    position: relative;
+    z-index: 4;
+}
+@media only screen and (max-width: 1300px) {
+    .NavBar{
+        gap: 10px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .HeaderWrapper{
+        padding: 50px 15px 50px 15px;
+    }
+    .arrow{
+        right: 15px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .NavBar {
+        display: none;
+    }
+    .MobileNavbar {
+        display: flex;
+        position: relative;
+        left: calc(100% - 30px);
+    }
+    .logo{
+        left: calc(50% - (355px / 2));
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Title{
+        max-width: 300px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .arrow{
+        display: none;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .Title{
+        font-size: 52px;
+    }
+    .Content{
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .logo{
+        left: calc(50% - (290px / 2));
+        width: 290px;
+        height: 596.4px;
+    }
+    .Title{
+        font-size: 48px;
+    }
+    .Content{
+        font-size: 32px;
+    }
+    .HeaderWrapper{
+        height: 800px;
+    }
+}

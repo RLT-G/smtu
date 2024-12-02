@@ -27,3 +27,33 @@
     color: #01437C;
     z-index: 3;
 }
+@media only screen and (max-width: 1400px) {
+    .Text{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 1280px) {
+    .Text{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .Text{
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Text{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .Text{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .Text{
+        font-size: 14px;
+    }
+}

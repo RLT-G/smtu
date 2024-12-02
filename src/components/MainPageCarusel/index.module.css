@@ -55,3 +55,57 @@
     position: relative;
     top: -2px;
 }
+@media only screen and (max-width: 640px) {
+    .btnNews, .btnArticle, .btnFeedbacks{
+        font-size: 18px;
+    }
+    .btnNews.active, .btnArticle.active, .btnFeedbacks.active{
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .CaruseltypeButtons{
+        gap: 15px;
+    }
+}
+@media only screen and (max-width: 475px) {
+    .CaruseltypeButtons{
+        gap: 5px;
+    }
+    .btnNews, .btnArticle, .btnFeedbacks{
+        font-size: 16px;
+    }
+    .btnNews.active, .btnArticle.active, .btnFeedbacks.active{
+        font-size: 22px;
+    }
+    .AllLinks{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .btnNews, .btnArticle, .btnFeedbacks{
+        font-size: 14px;
+    }
+    .btnNews.active, .btnArticle.active, .btnFeedbacks.active{
+        font-size: 20px;
+    }
+    .AllLinks{
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .btnNews, .btnArticle, .btnFeedbacks{
+        font-size: 12px;
+    }
+    .btnNews.active, .btnArticle.active, .btnFeedbacks.active{
+        font-size: 18px;
+    }
+    .AllLinks{
+        font-size: 8px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .AllLinks{
+        display: none;
+    }
+}

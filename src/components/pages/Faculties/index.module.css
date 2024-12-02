@@ -38,6 +38,7 @@
 }
 .slink{
     background-color: #d0d0d0;
+
 }
 .second{
     width: 100%;
@@ -51,4 +52,99 @@
 .endSLink{
     position: relative;
     left: 406px;
+    width:793px;height: 383px
+}
+.kaia{
+    position: relative;
+    top: -201.5px;
+    width: 386px;
+}
+.cpt{
+    position: relative;
+    top: 191px;
+    width:386px;
+    height: 383px
+}
+.kia{
+    width:793px;
+    height: 383px
+}
+.ia{
+    width:386px; height: 383px
+}
+.eigo{
+    width:793px; height: 383px
+}
+@media only screen and (max-width: 1400px) {
+    .Wrapper{
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .Wrapper{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .kaia{
+        position: relative;
+        top: 0;
+    }
+    .cpt{
+        position: relative;
+        top: 0;
+    }
+    .first{
+        flex-direction: column;
+    }
+    .Links{
+        width: 100%;
+    }
+    .kia{
+        height: auto;
+        width: 100%;
+        aspect-ratio: 2;
+    }
+    .cpt, .ia{
+        height: auto;
+        width: calc((100% - 20px) / 2);
+        aspect-ratio: 1;
+    }
+    .kaia{
+        height: auto;
+        width: 100%;
+        aspect-ratio: 2;
+    }
+    .endSLink{
+        left: 0;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 2;
+    }
+    .eigo{
+        left: 0;
+        height: auto;
+        width: 100%;
+        aspect-ratio: 2;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .firstleftbottom{
+        flex-direction: column;
+    }
+    .ia, .cpt{
+        height: auto;
+        width: 100%;
+        aspect-ratio: 2;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .Title{
+        font-size: 48px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .Title{
+        font-size: 42px;
+    }
 }

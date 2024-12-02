@@ -3,12 +3,14 @@
     height: 272px;
     background: url(../../assets/img/MainBackground2.webp) no-repeat;
     background-size: cover;
-    padding: 50px 200px 10px 200px;
+    padding: 50px 0px 10px 0px;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
 }
 .HeaderTop{
+    width: 1200px;
     display: flex;
     justify-content: space-between;
 }
@@ -81,6 +83,7 @@
     top: -3px;
 }
 .HeaderDown{
+    width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -98,4 +101,56 @@
     text-transform: uppercase;
     color: #FFF;    
     cursor: pointer;
+}
+.MobileNavbar{
+    display: none;
+    position: relative;
+    z-index: 4;
+}
+
+@media only screen and (max-width: 1200px) {
+    .HeaderWrapper{
+        padding: 50px 15px 10px 15px;
+    }
+    .HeaderTop{
+        width: 100%;
+    }
+    .HeaderDown{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    .NavBar{
+        gap: 5px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .HeaderWrapper{
+        padding: 15px;
+    }
+    .NavBar{
+        display: none;
+    }
+    .MobileNavbar{
+        display: flex;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+    .HeaderDown{
+        display: none;
+    }
+    .LogoAndText{
+        flex-direction: column;
+        align-items: center;
+    }
+    .HeaderTop{
+        justify-content: center;
+    }
+    .HeaderDown{
+        display: none;
+    }
+    .HeaderWrapper{
+        height: auto;
+    }
 }
