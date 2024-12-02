@@ -1,0 +1,40 @@
+.Wrapper{
+    width: 895px;
+    position: relative;
+}
+.ItemsWrapper{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.Item {
+    transition: 0.3s ease-in-out;
+}
+.ArrowLeft, .ArrowRight{
+    border: none;
+    background: transparent;
+    width: 52px;
+    height: 24px;
+    background: url(../../assets/img/arrowdefault.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transition: 0.2s;
+}
+.ArrowLeft:hover, .ArrowRight:hover{
+    background: url(../../assets/img/arrowhover.svg) no-repeat;
+    background-size: cover;
+}
+.ArrowLeft:disabled, .ArrowRight:disabled{
+    background: url(../../assets/img/arrowdisabled.svg) no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.ArrowLeft{
+    left: -77px;
+    transform: rotate(180deg);
+}
+.ArrowRight{
+    right: -52px;
+}

@@ -3,3 +3,7 @@ declare module "*.module.css" {
     export default classes;
 }
 
+declare module "*.mp4" {
+    const src: string;
+    export default src;
+}

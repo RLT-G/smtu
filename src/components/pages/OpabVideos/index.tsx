@@ -3,6 +3,7 @@ import Header from "../../Header";
 import Footer from "../../Footer";
 import classes from "./index.module.css";
 import Video from "../../Video";
+import video1 from "../../../assets/video/baby.mp4"
 
 interface IbuttonContent {
   scrollTo: number;
@@ -71,7 +72,7 @@ const OpabVideos: React.FC = () => {
   ]
   const videoContent: Array<IvideoContent> = [
       { caption: 'Глава I. Вставай, страна огромная!', src: 'https://www.youtube.com/watch?v=w-WsJ6FezlA', photo: 'https://i.ytimg.com/vi/w-WsJ6FezlA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5XOW2v2AQEvftrYnkceJW4Rzorg'},
-      { caption: 'Глава II. Ты записался добровольцем?', src: '', photo: ''},
+      { caption: 'Глава II. Ты записался добровольцем?', src: video1, photo: ''},
       { caption: 'Глава III. Батальон Корабелов сформирован', src: '', photo: ''},
       { caption: 'Глава IV. Подготовка к боям', src: '', photo: ''},
       { caption: 'Глава V. Строительство укрепрайона', src: '', photo: ''},

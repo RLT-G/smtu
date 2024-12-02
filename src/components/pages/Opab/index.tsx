@@ -6,6 +6,10 @@ import ArticleText from "../../ui/ArticleText";
 import ArticlePhotoCarousel from "../../ui/ArticlePhotoCarousel";
 import Button from "../../ui/Button";
 import { useNavigate } from "react-router-dom";
+import Carusel from "../../Carusel";
+import OpabCarusel from "../../OpabCarusel";
+import persons from '../../../persons.json'
+import PersonItem from "../../PersonItem";
 
 
 const Opab: React.FC = () => {
@@ -34,7 +38,12 @@ const Opab: React.FC = () => {
                             временная шкала
                         </Button>
                     </div>
+                    <OpabCarusel>
+                        {persons.items.map(({ id, rank, photo, fio }, index) => <PersonItem key={index} id={id} rank={rank} photo={photo} fio={fio}/>)}
+                    </OpabCarusel>
                 </div>
+                
+
             </div>
             <Footer />
         </>
