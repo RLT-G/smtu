@@ -1,7 +1,7 @@
 .wrapper{
     display: flex;
     flex-direction: column;
-    padding: 120px 200px;
+    padding: 120px 15px;
     align-items: center;
 }
 
@@ -10,7 +10,8 @@
     font-weight: 700;
     font-size: 64px;
     color: #01437C;
-    align-self: flex-start;
+    width: 1252px;
+
 }
 
 .ItemsContainer{
@@ -21,9 +22,28 @@
     margin-top: 60px;
     margin-bottom: 60px;
     justify-content: center;
+    width: 1252px;
+
 }
 
 .Button{
     width: 386px;
     height: 74px;
+}
+@media only screen and (max-width: 1300px) {
+    .title{
+        width: 100%;
+        align-self: self-start;
+    }
+    .ItemsContainer{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Button{
+        width: 280px;
+    }
+    .title{
+        font-size: 42px;
+    }
 }

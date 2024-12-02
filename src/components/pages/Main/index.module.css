@@ -142,9 +142,6 @@
     }
 }
 @media only screen and (max-width: 800px) {
-    .Part3{
-        /* flex-direction: column; */
-    }
     .Part3Left{
         height: 380px;
         width: calc((100% - 30px) / 2);
