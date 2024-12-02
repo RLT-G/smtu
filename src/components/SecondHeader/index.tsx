@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from './index.module.css'
 import DropDownMenu from "../ui/DropDownMenu";
 import HeaderDropMenu from "../HeaderDropMenu";
 import { useNavigate } from "react-router-dom";
+import PopUpWrapper from "../PopUpWrapper";
+import PopUpSearch from "../PopUpSearch";
 
 
 interface IMenuItem {
@@ -30,8 +32,16 @@ const SecondHeader: React.FC = () => {
         { text: 'естественнонаучного и гуманитарного образования', onClick: () => {navigate('/faculties_detail?f=eigo')} },
     ]
 
+    const [needSearch, setNeedSearch] = useState<boolean>(false)
+    const openSearch = (): void => { setNeedSearch(true) }
+    const closeSearch = (): void => { setNeedSearch(false) }
+    
     return (
         <div className={classes.HeaderWrapper}>
+            {needSearch && <PopUpWrapper closePopUp={closeSearch}>
+                <PopUpSearch />
+            </PopUpWrapper>}
+
             <div className={classes.HeaderTop}>
 
                 <div className={classes.LogoAndText}
@@ -60,7 +70,7 @@ const SecondHeader: React.FC = () => {
                         onClick={() => {navigate('/feedbacks')}}
                     >отзывы</button>
                     <button className={classes.Search}
-                        onClick={() => {}}
+                        onClick={() => {openSearch()}}
                     ></button>
                 </div>
 

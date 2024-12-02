@@ -60,10 +60,10 @@ const Carusel: React.FC<ICarusel> = ({ caruselItems, getCaruselType }) => {
                     :  caruselItems.map(({ date, author, text }) => <FeedbacksItem style={{transform: `translateX(${offset}px)`}} date={date} text={text} author={author}/>)
             }
 
-            <button className={classes.ArrowLeft}
+            <button className={classes.ArrowLeft} disabled={offset + 400 >= 0}
                 onClick={() => {moveLeft()}}
             ></button>
-            <button className={classes.ArrowRight}
+            <button className={classes.ArrowRight} disabled={offset - 400 < -(caruselItems.length - 2) * 400}
                 onClick={() => {moveRight()}}
             ></button>
         </div>

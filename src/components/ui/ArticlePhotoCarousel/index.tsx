@@ -40,9 +40,9 @@ const ArticlePhotoCarousel: React.FC<IArticlePhotoCarousel> = ({ data }) => {
                 <div className={classes.Wrapper2}>
                     <span className={classes.Caption}>{data[dataIndex][1]}</span>
                     <div className={classes.Arrows}>
-                        <button className={classes.ArrowLeft}
+                        <button className={classes.ArrowLeft} disabled={dataIndex - 1 < 0}
                             onClick={leftArrowhandler}></button>
-                        <button className={classes.ArrowRight}
+                        <button className={classes.ArrowRight} disabled={dataIndex + 1 >= data.length}
                             onClick={rightArrowHandler}></button>
                     </div>
                 </div>

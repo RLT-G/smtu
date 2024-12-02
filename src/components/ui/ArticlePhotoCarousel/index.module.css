@@ -37,10 +37,15 @@
 .ArrowLeft:hover, .ArrowRight:hover{
     background: url(../../../assets/img/arrowhover.svg) no-repeat;
 }
+
 .ArrowLeft{
     transform: rotate(180deg);
 }
 .ArrowRight{
     position: relative;
     top: -1px;
+}
+.ArrowLeft:disabled, .ArrowRight:disabled{
+    background: url(../../../assets/img/arrowdisabled.svg) no-repeat;
+    background-size: cover;
 }

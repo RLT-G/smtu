@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from './index.module.css'
 import { useNavigate } from "react-router-dom";
+import PopUpWrapper from "../PopUpWrapper";
+import PopUpSearch from "../PopUpSearch";
 
 interface IFirstHeader {
     fScroll?: () => void
@@ -8,9 +10,14 @@ interface IFirstHeader {
 
 const FirstHeader: React.FC<IFirstHeader> = ({ fScroll }) => {
     const navigate = useNavigate()
-
+    const [needSearch, setNeedSearch] = useState<boolean>(false)
+    const openSearch = (): void => { setNeedSearch(true) }
+    const closeSearch = (): void => { setNeedSearch(false) }
     return (
         <div className={classes.HeaderWrapper}>
+            {needSearch && <PopUpWrapper closePopUp={closeSearch}>
+                <PopUpSearch />
+            </PopUpWrapper>}
             <div className={classes.NavBar}>
                 <button className={classes.goToOPAB}
                     onClick={() => {navigate('/opab')}}
@@ -28,7 +35,7 @@ const FirstHeader: React.FC<IFirstHeader> = ({ fScroll }) => {
                     onClick={() => {navigate('/feedbacks')}}
                 >отзывы</button>
                 <button className={classes.Search}
-                    onClick={() => {}}
+                    onClick={() => {openSearch()}}
                 ></button>
             </div>
             <div className={classes.MainText}>
