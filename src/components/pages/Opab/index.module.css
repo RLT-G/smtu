@@ -24,7 +24,80 @@
     display: flex;
     justify-content: start;
 }
+.ButtonContainer2{
+    width: 895px;
+    display: flex;
+    justify-content: start;
+
+}
 .Button{
     width: 284px;
     height: 47px;
+}
+.Button2{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.VideoItem{
+    width: 387px;
+    height: 311px;
+    position: relative;
+}
+.VideoCenter{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: url(../../../assets/img/Play_1.svg) no-repeat;
+    background-size: cover;
+    transition: 0.2s;
+    cursor: pointer;
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+}
+.VideoCenter:hover{
+    background: url(../../../assets/img/Play_2.svg) no-repeat;
+    background-size: cover;
+}
+.VideoCaption{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 23px;
+    letter-spacing: 0.02em;
+    color: #01437c;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: calc(100% - 60px);
+    text-align: start;
+}
+.LeftNav{
+    position: fixed;
+    top: calc(272px + 120px + 60px);
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: 0.2s;
+}
+.LeftNavItemDate{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437c;
+    font-weight: 700;
+    font-size: 40px;
+}
+.LeftNavItem{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437c;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.LeftNavItem:hover{
+    color: #00AEEF;
+}
+.Section{
+    position: relative;
 }

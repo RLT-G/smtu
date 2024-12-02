@@ -3,9 +3,10 @@ import classes from './index.module.css';
 
 interface IOpabCarusel {
     children: ReactNode;
+    className?: string
 }
 
-const OpabCarusel: React.FC<IOpabCarusel> = ({ children }) => {
+const OpabCarusel: React.FC<IOpabCarusel> = ({ children, className }) => {
     const [startIndex, setStartIndex] = useState<number>(0);
 
     const childrenArray = React.Children.toArray(children);
@@ -27,7 +28,7 @@ const OpabCarusel: React.FC<IOpabCarusel> = ({ children }) => {
     };
 
     return (
-        <div className={classes.Wrapper}>
+        <div className={[classes.Wrapper, className].join(' ')}>
             <div className={classes.ItemsWrapper}>
                 {visibleItems.map((child, index) => (
                     <div

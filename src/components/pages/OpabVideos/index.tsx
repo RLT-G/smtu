@@ -4,6 +4,8 @@ import Footer from "../../Footer";
 import classes from "./index.module.css";
 import Video from "../../Video";
 import video1 from "../../../assets/video/baby.mp4"
+import videoData from '../../../video.json';
+
 
 interface IbuttonContent {
   scrollTo: number;
@@ -70,21 +72,9 @@ const OpabVideos: React.FC = () => {
     { scrollTo: 8994, text: 'глава Xii' },
     { scrollTo: 9698, text: 'глава Xiii' },
   ]
-  const videoContent: Array<IvideoContent> = [
-      { caption: 'Глава I. Вставай, страна огромная!', src: 'https://www.youtube.com/watch?v=w-WsJ6FezlA', photo: 'https://i.ytimg.com/vi/w-WsJ6FezlA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB5XOW2v2AQEvftrYnkceJW4Rzorg'},
-      { caption: 'Глава II. Ты записался добровольцем?', src: video1, photo: ''},
-      { caption: 'Глава III. Батальон Корабелов сформирован', src: '', photo: ''},
-      { caption: 'Глава IV. Подготовка к боям', src: '', photo: ''},
-      { caption: 'Глава V. Строительство укрепрайона', src: '', photo: ''},
-      { caption: 'Глава VI. Боевой путь третьей роты', src: '', photo: ''},
-      { caption: 'Глава VII. Подвиг Юрия Никитина', src: '', photo: ''},
-      { caption: 'Глава VIII. Подвиг Бориса Потапова', src: '', photo: ''},
-      { caption: 'Глава IX. Боевой путь четвертой роты', src: '', photo: ''},
-      { caption: 'Глава X. Боевой путь первой роты', src: '', photo: ''},
-      { caption: 'Глава XI. Боевой путь второй роты', src: '', photo: ''},
-      { caption: 'Глава XII. Штыковая контратака', src: '', photo: ''},
-      { caption: 'Глава XIII. Последний рубеж', src: '', photo: ''},
-  ]
+  
+  const videoContent: Array<IvideoContent> = videoData.items
+
   return (
     <>
       <Header isMainPage={false} />
