@@ -2,7 +2,6 @@
     width: 895px;
     height: 504px;
     background-color: #cccccc;
-    margin-left: 505px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,10 +49,29 @@
     background-size: cover;
 }
 .Text{
-    margin-left: 505px;
     margin-bottom: 40px;
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
     font-size: 40px;
     color: #01437c;
+    width: 900px;
+    max-width: 100%;
+}
+.Text, .Block {
+    align-self: self-end;
+}
+@media only screen and (max-width: 1000px) {
+    .Text, .Block{
+        align-self: unset;
+    }
+    .Block{
+        width: 100%;
+        aspect-ratio: 1.77;
+        height: auto;
+    }
+  }
+  @media only screen and (max-width: 420px) {
+    .Text{
+        font-size: 32px;
+  }
 }
