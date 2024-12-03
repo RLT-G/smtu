@@ -1,7 +1,7 @@
 .Wrapper{
     display: flex;
     flex-direction: column;
-    padding: 120px 200px;
+    padding: 120px 15px;
     align-items: center;
 }
 .Title{
@@ -9,8 +9,8 @@
     font-weight: 700;
     font-size: 64px;
     color: #01437C;
-    align-self: flex-start;
     margin-bottom: 60px;
+    width: 1252px;
 }
 .FeedbacksContainer{
     display: flex;
@@ -18,9 +18,28 @@
     flex-wrap: wrap;
     margin-bottom: 60px;
     justify-content: center;
+    width: 1252px;
 }
 .Button{
     width: 385px;
     height: 74px;
     margin-bottom: 120px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .Title{
+        width: 100%;
+        align-self: self-start;
+    }
+    .FeedbacksContainer{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Button{
+        width: 280px;
+    }
+    .Title{
+        font-size: 42px;
+    }
 }

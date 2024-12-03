@@ -24,3 +24,20 @@
     width: 100%;
     height: 69px;
 }
+@media only screen and (max-width: 420px) {
+    .Wrapper{
+        width: calc(100% - 30px);
+        min-width: calc(100% - 30px);
+    }
+    .Text{
+        font-size: 24px;
+    }
+    .Button{
+        padding-right: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

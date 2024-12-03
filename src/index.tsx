@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
   const routes: Array<RouteConfig> = [
     // Главная
-    { path: "/", component: Main, exact: true },
+    { path: "/", component: Main, exact: true }, // A
     // Страница Персоны
     { path: "/person", component: Person, exact: true },
     // История
@@ -39,7 +39,7 @@ const App: React.FC = () => {
     // Каталог
     { path: "/catalog", component: Catalog, exact: true },
     // Факультеты общая
-    { path: "/faculties", component: Faculties, exact: true },
+    { path: "/faculties", component: Faculties, exact: true }, // A
     // Факультеты Разделы
     { path: "/faculties_detail", component: FacultiesDetail, exact: true },
     // Раздел ОПАБ
@@ -49,13 +49,13 @@ const App: React.FC = () => {
     // ОПАБ Видео
     { path: "/opab_video", component: OpabVideos, exact: true },
     // Остальное
-    { path: "/other", component: Other, exact: true },
+    { path: "/other", component: Other, exact: true }, // A
     // Новости/статьи
-    { path: "/news_articles", component: NewsArticles, exact: true },
+    { path: "/news_articles", component: NewsArticles, exact: true }, // A
     // Страница статьи
     { path: "/articles", component: Articles, exact: true },
     // Отзывы
-    { path: "/feedbacks", component: Feedbacks, exact: true },
+    { path: "/feedbacks", component: Feedbacks, exact: true }, // A
     // Контакты
     { path: "/contacts", component: Contacts, exact: true },
     // 404
