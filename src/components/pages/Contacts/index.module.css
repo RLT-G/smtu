@@ -2,7 +2,8 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 120px 200px;
+    padding: 120px 15px;
+    align-items: center;
 }
 .Title, .Title2, .firstText, .secondText, .LinkCheckbox, .LabelForCheckbox{
     font-family: "Ubuntu", sans-serif;
@@ -116,4 +117,51 @@ height: 47px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+}
+
+
+
+
+.Title{
+    width: 1252px;
+}
+.Title2{
+    width: 1252px;
+}
+.TextForm{
+    width: 1252px;
+}
+.AboutWrapper{
+    width: 1252px;
+}
+@media only screen and (max-width: 1300px) {
+    .Title, .Title2, .TextForm, .AboutWrapper{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .TextForm{
+        flex-direction: column;
+    }
+    .blablabla{
+        width: 100%;
+    }
+    .Form{
+        width: 100%;
+    }
+    .AboutWrapper{
+        flex-direction: column;
+        gap: 30px;    
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Button{
+        width: 280px;
+    }
+    .Title{
+        font-size: 42px;
+    }
+    .Title2{
+        font-size: 24px;
+    }
 }

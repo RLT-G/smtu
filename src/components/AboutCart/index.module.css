@@ -46,3 +46,23 @@
     font-weight: 500;
     font-size: 30px
 }
+@media only screen and (max-width: 1000px) {
+    .AboutCart{
+        width: 100%;
+        min-width: 100%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .AboutCart{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .AboutPhoto{
+        width: 100%;
+    min-width: 100%;
+    }
+    .AboutTextWrapper{
+        width: 100%;
+        min-width: 100%;
+    }
+}

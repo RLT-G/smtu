@@ -57,7 +57,7 @@ const App: React.FC = () => {
     // Отзывы
     { path: "/feedbacks", component: Feedbacks, exact: true }, // A
     // Контакты
-    { path: "/contacts", component: Contacts, exact: true },
+    { path: "/contacts", component: Contacts, exact: true }, // A
     // 404
     { path: "*", component: NotFound, exact: true },
   ];
