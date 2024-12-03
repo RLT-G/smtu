@@ -1,7 +1,7 @@
 .Wrapper{
     display: flex;
     flex-direction: column;
-    padding: 120px 200px;
+    padding: 120px 15px;
     align-items: center;
 }
 .Title{
@@ -10,9 +10,32 @@
     font-size: 64px;
     color: #01437C;
     margin-bottom: 60px;
-    align-self: flex-start;
 }
 .Button{
     width: 386px;
     height: 74px;
+}
+
+
+
+
+
+
+
+.Title{
+    width: 1252px;
+}
+
+@media only screen and (max-width: 1300px) {
+    .Title{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Button{
+        width: 280px;
+    }
+    .Title{
+        font-size: 42px;
+    }
 }

@@ -25,3 +25,15 @@
 .fio:hover{
     color: #00AEEF;
 }
+@media only screen and (max-width: 1000px) {
+    .Wrapper{
+        width: calc((100% - 20px) / 2);
+    min-width: calc((100% - 20px) / 2);
+    }
+}
+@media only screen and (max-width: 500px) {
+    .Wrapper{
+        width: 100%;
+    min-width: 100%;
+    }
+}

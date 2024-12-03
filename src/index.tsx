@@ -37,7 +37,7 @@ const App: React.FC = () => {
     // История
     { path: "/history", component: History, exact: true },
     // Каталог
-    { path: "/catalog", component: Catalog, exact: true },
+    { path: "/catalog", component: Catalog, exact: true }, // A
     // Факультеты общая
     { path: "/faculties", component: Faculties, exact: true }, // A
     // Факультеты Разделы
