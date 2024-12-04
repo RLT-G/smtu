@@ -47,7 +47,7 @@ const App: React.FC = () => {
     // ОПАБ календарь
     { path: "/opab_calendar", component: OpabCalendar, exact: true },
     // ОПАБ Видео
-    { path: "/opab_video", component: OpabVideos, exact: true },
+    { path: "/opab_video", component: OpabVideos, exact: true }, //A
     // Остальное
     { path: "/other", component: Other, exact: true }, // A
     // Новости/статьи
