@@ -5,6 +5,7 @@
     color: #00AEEF;
     position: relative;
     margin-bottom: 2px;
+    max-width: 60%;
 }
 .Line{
     width: 100%;

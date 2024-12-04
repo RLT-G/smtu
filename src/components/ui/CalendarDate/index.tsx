@@ -6,13 +6,14 @@ interface ICalendarDate {
     date: string
     marginBottom?: string
     orientation?: string
+    className?: string
 }
 
 
-const CalendarDate: React.FC<ICalendarDate> = ({ date, marginBottom, orientation = 'start' }) => {
+const CalendarDate: React.FC<ICalendarDate> = ({ className, date, marginBottom, orientation = 'start' }) => {
     return (
         <>
-            <span className={classes.text} style={{
+            <span className={[classes.text, className].join(' ')} style={{
                 textAlign: orientation === 'start' ? 'start' : 'end',
                 left: orientation === 'start' ? '20px' : 'none',
                 right: orientation === 'end' ? '20px' : 'none'

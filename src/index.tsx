@@ -33,7 +33,7 @@ const App: React.FC = () => {
     // Главная
     { path: "/", component: Main, exact: true }, // A
     // Страница Персоны
-    { path: "/person", component: Person, exact: true },
+    { path: "/person", component: Person, exact: true }, // A
     // История
     { path: "/history", component: History, exact: true },
     // Каталог
