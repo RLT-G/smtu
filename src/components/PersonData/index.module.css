@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    max-width: 1200px;
 }
 .TabSelector{
     display: flex;
@@ -17,24 +18,26 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    border: 1px solid #01437C;
-    opacity: 0.5;
+    /* border: 1px solid #01437C; */
     transition: 0.2s;
     width: 15%;
     position: relative;
     background-color: #f0f0f0;
     height: 50px;
     z-index: 1;
-    margin-right: calc(10% / 3);
+    width: calc(70% / 4);
+    /* margin-right: calc(10% / 3); */
+    background: url(../../assets/img/prdefault.webp) no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.5;
 }
-.Button::after{
+/* .Button::after{
     content: '';
     display: block;
     position: absolute;
     width: 0;
     height: 0;
     border-right: 50px solid transparent;
-    /* border-bottom: 50px solid #f0f0f0; */
     border-bottom: 48px solid #f0f0f0;
     top: 0;
     right: -50px;
@@ -49,7 +52,7 @@
     border-bottom: 51px solid #01437C;
     top: -1.8px;
     right: -53px;
-}
+} */
 .Button:hover{
     opacity: 1;
 }
@@ -61,10 +64,14 @@
     opacity: 1;
     width: 30%;
     height: 60px;
-    border: 1px solid transparent;
+    border: none;
     margin-right: 0;
+    background: url(../../assets/img/practive.webp) no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 5;
 }
-.Acctive::after{
+/* .Acctive::after{
     content: '';
     display: block;
     border: none;
@@ -77,10 +84,10 @@
     border-top: 60px solid #FFF;
     top: -1px;
     right: -1px;
-}
-.Acctive::before{
+} */
+/* .Acctive::before{
     display: none;
-}
+} */
 .TabWrapper{
     width: 100%;
     padding: 15px;
@@ -173,4 +180,60 @@
 }
 .ArrowLeft:hover, .ArrowRight:hover{
     background: url(../../assets/img/arrowhover.svg) no-repeat;
+}
+@media only screen and (max-width: 950px) {
+    .Button{
+        font-size: 18px;
+    }
+    .Acctive{
+        font-size: 32px;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .Button{
+        font-size: 16px;
+    }
+    .Acctive{
+        font-size: 28px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .Button{
+        font-size: 14px;
+    }
+    .Acctive{
+        font-size: 24px;
+    }
+    .BioButton{
+        font-size: 12px;
+    }
+    .BioButtons{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 15px;
+        flex-wrap: nowrap;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .Button{
+        text-align: start;
+        font-size: 12px;
+    }
+    .Acctive{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .BioButton{
+        font-size: 8px;
+    }
+    .Button{
+        text-align: start;
+        font-size: 8px;
+        height: 30px;
+    }
+    .Acctive{
+        font-size: 12px;
+    }
 }

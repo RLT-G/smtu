@@ -1,13 +1,15 @@
 .Wrapper{
     display: flex;
     flex-direction: column;
-    padding: 120px 200px;
+    padding: 120px 15px;
+    align-items: center;
 }
 .Person{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 120px;
+    max-width: 1200px;
 }
 .PersonMainData{
     display: flex;
@@ -74,6 +76,7 @@
     margin-top: 120px;
     display: flex;
     justify-content: space-between;
+    width: 1200px;
 }
 .RecommendedTitle{
     font-family: "Ubuntu", sans-serif;
@@ -95,4 +98,80 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+@media only screen and (max-width: 1230px) {
+    .RecommendedWrapper{
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .Wrapper{
+        padding: 120px 15px;
+    }
+    .Person{
+        width: 100%;
+    }
+    .RecommendedPersonWrapper{
+        width: 100%;
+        justify-content: start;
+        overflow-x: scroll;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .PersonPhoto{
+        width: 50%;
+        aspect-ratio: 0.7;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .Name{
+        font-size: 52px;
+    }
+    .Person{
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .PersonPhoto{
+        width: 70%;
+        aspect-ratio: 0.7;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .RecommendedWrapper{
+        align-items: center;
+    }
+    .RecommendedTitle{
+        font-size: 32px;
+    }
+    .RecommendedButton{
+        width: auto;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .PersonPhoto{
+        width: 90%;
+        aspect-ratio: 0.7;
+        height: auto;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .RecommendedTitle{
+        font-size: 24px;
+    }
+    .RecommendedButton{
+        width: auto;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .RecommendedWrapper{
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
 }
