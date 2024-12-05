@@ -13,7 +13,7 @@ const History: React.FC = () => {
     
     useEffect(() => {
         const handleScroll = () => {
-            const sections = document.querySelectorAll(`.${classes.Section1}`);
+            const sections = document.querySelectorAll(`.${classes.Section1.replace(/\+/g, '\\+')}`);
             const scrollPosition = window.scrollY + window.innerHeight / 2;
             sections.forEach((section, index) => {
                 const rect = section.getBoundingClientRect();
@@ -39,6 +39,14 @@ const History: React.FC = () => {
           behavior: 'smooth',
         });
       };
+
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <>
@@ -69,7 +77,13 @@ const History: React.FC = () => {
                                     <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(2000); setLeftNavIndex(1)}}>во время вов</span>
                                 </div>
                             )}
-
+                    {width <= 1230 && <>
+                        <div className={classes.LeftNavAdaptive}>
+                            <span className={classes.LeftNavItemDate}>с 1931 по 1941</span>
+                            <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(2000); setLeftNavIndex(1)}}>во время ВОВ</span>
+                            <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(4000); setLeftNavIndex(2)}}>в мирное время</span>
+                        </div>
+                    </>}
                     <ArticleText className={classes.Section1} text={"В 1935 году состоялся первый выпуск ЛКИ первого набора 1930 года. В итоге было выпущено 90 человек, среди которых – две женщины: В.Ф. Волькович с кораблестроительного факультета и Т.З. Аронштам с машиностроительного факультета. Впоследствии они внесли значительный вклад в достижение Победы в Великой Отечественной войне. Зачастую им приходилось заниматься вроде бы неженским делом по созданию и совершенствованию военной техники. Так, Ф.В. Волькович ещё до войны начала работать над проблемой бронирования кораблей под руководством профессора П.Ф. Папковича."}/>
                     <ArticleText text={"В 1939 году по ходатайству Народного комиссариата судостроительной промышленности СССР постановлением правительства был организован инженерно-экономический факультет Ленинградского Кораблестроительного Института (ЛКИ) со специальностью Экономика и организация судостроительной промышленности со сроком обучения 5 лет. Это был четвертый факультет ЛКИ, после кораблестроительного, судомеханического и вечернего."} />
                     <ArticleText text={"Организация и подготовка к его открытию началась на год раньше и осуществлялась директором Кораблестроительного института И.И. Яковлевым и тогда еще доцентом, к.э.н. С.П. Логиновым. В том же году факультет приступил к набору студентов и организации занятий сразу на первых трех курсах, при этом на первый курс приняты отличники и лица успешно сдавшие вступительные экзамены. Второй и третий курсы были укомплектованы 'переводниками' из других вузов и факультетов ЛКИ. Деканом факультета был утвержден к.э.н. доцент С.П. Логинов"} />
@@ -79,6 +93,14 @@ const History: React.FC = () => {
                         ["https://i.imgur.com/xxDpgLz_d.webp?maxwidth=760&fidelity=grand", "Подпись для фотки 2"],
                         ["https://i.imgur.com/XxFFsd8_d.webp?maxwidth=760&fidelity=grand", "Подпись для фотки 3"]
                     ]}/>
+
+                    {width <= 1230 && <>
+                        <div className={classes.LeftNavAdaptive}>
+                            <span className={classes.LeftNavItemDate}>с 1941 по 1945</span>
+                            <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>до войны</span>
+                            <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(4000); setLeftNavIndex(2)}}>в мирное время</span>
+                        </div>
+                    </>}
 
                     <ArticleText className={classes.Section1} text={"С началом Второй мировой войны, постановление правительства СССР отменило отсрочку от армии для учащихся высшей школы. В октябре 1939 г. студенты ЛКИ пополнили ряды Красной армии. Часть молодых людей оказалась в составе 189-го зенитно-артиллерийского полка, другие – в танковых или пехотных войсках. Около года ребята проходили военную подготовку, и в 1940 г. получили погоны сержантов. Большинство из них погибло – именно они стояли на пути гитлеровских армий осенью 1941 г. После объявления приказа о всеобщей мобилизации, одним их первых ушел добровольцем на фронт ректор ЛКИ Иван Ионович Яковлев, а вместе с ним еще 1200 студентов. В это же время в институте стали формироваться отряды местной противовоздушной обороны (МПВО) и отдельный пулеметно-артиллерийский батальон (ОПАБ). В блокадном Ленинграде корабелы самоотверженно трудились на судостроительных заводах. Так профессор В.Ф. Попов был главным инженером Балтийского, а доцент С.М. Турунов Адмиралтейского заводов, на производстве работали – профессор П.А. Дорошенко, доцент Б.А. Плисов, В.Я. Мицкевич и многие другие."} />
                     <ArticlePhotoAndText data={{
@@ -93,7 +115,13 @@ const History: React.FC = () => {
                         "https://i.imgur.com/7orwK5q_d.webp?maxwidth=760&fidelity=grand",
                         "Возобновление занятий в блокадном Ленинграде"
                     ]}/>
-                    
+                    {width <= 1230 && <>
+                        <div className={classes.LeftNavAdaptive}>
+                            <span className={classes.LeftNavItemDate}>с 1945 по 1980</span>
+                            <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>до войны</span>
+                            <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(2000); setLeftNavIndex(1)}}>во время вов</span>
+                        </div>
+                    </>}
                     <ArticleText className={classes.Section1} text={"В октябре 1947 г. на первой конференции участников студенческих научных кружков было провозглашено создание студенческого научно-технического общества (СНО) ЛКИ. Председателем СНО был избран профессор В.К. Васильев, заместителем председателя стал студент А.Н. Холодилин (в будущем – профессор ЛКИ), учёным секретарём – студент В.С. Дорин (впоследствии – лауреат Государственной премии). Общество имело свою печать и обладало юридическим статусом самостоятельной организации. Вторая конференция СНО прошла в марте 1948 г., на ней выступили с докладами студенты, многие из которых впоследствии стали видными учёными"} />
                     
                     <ArticlePhotoAndText data={{

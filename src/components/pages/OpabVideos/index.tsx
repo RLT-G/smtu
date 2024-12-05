@@ -22,21 +22,19 @@ const OpabVideos: React.FC = () => {
     
   useEffect(() => {
       const handleScroll = () => {
-          const sections = document.querySelectorAll(`.${classes.Section}`);
+          const sections = document.querySelectorAll(`.${classes.LeftPanelSection.replace(/\+/g, '\\+')}`);
           const scrollPosition = window.scrollY + window.innerHeight / 2;
           if (window.scrollY > 1125) {
             setNavIsFixed(true)
           } else {
             setNavIsFixed(false)
           }
-          console.log(window.scrollY)
           sections.forEach((section, index) => {
               const rect = section.getBoundingClientRect();
               const sectionTop = rect.top + window.scrollY;
               const sectionBottom = sectionTop + rect.height;
 
               if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
-                console.log(index)
                   setLeftNavIndex(index);
               }
           });
@@ -126,7 +124,7 @@ const OpabVideos: React.FC = () => {
               </div>
             </div>
             {videoContent.map(({caption, src, photo}) => 
-                <Video className={classes.Section} src={src} caption={caption} photo={photo}/>
+                <Video className={classes.LeftPanelSection} src={src} caption={caption} photo={photo}/>
             )}
           </div>
         </div>
@@ -161,7 +159,7 @@ export default OpabVideos;
     
 //   useEffect(() => {
 //       const handleScroll = () => {
-//           const sections = document.querySelectorAll(`.${classes.Section}`);
+//           const sections = document.querySelectorAll(`.${classes.LeftPanelSection}`);
 //           const scrollPosition = window.scrollY + window.innerHeight / 2;
 //           if (window.scrollY > 1125) {
 //             setNavIsFixed(true)
@@ -264,7 +262,7 @@ export default OpabVideos;
         // </div>
 
       //   {videoContent.map(({caption, src, photo}) => 
-      //     <Video className={classes.Section} src={src} caption={caption} photo={photo}/>)}
+      //     <Video className={classes.LeftPanelSection} src={src} caption={caption} photo={photo}/>)}
 
       // </div>
 //       <Footer />

@@ -48,3 +48,64 @@
 .Section1{
     position: relative;
 }
+@media only screen and (max-width: 1600px) {
+    .Wrapper{
+        padding: 120px 150px;
+    }
+    .LeftNav{
+        left: 150px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .Wrapper{
+        padding: 120px 100px;
+    }
+    .LeftNav{
+        left: 100px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .Wrapper{
+        padding: 120px 50px;
+    }
+    .LeftNav{
+        left: 50px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .Wrapper{
+        padding: 120px 15px;
+    }
+    .LeftNav{
+        left: 15px;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .LeftNav{
+        display: none;
+    }
+}
+.LeftNavAdaptive{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (max-width: 640px) {
+    .LeftNavItemDate{
+        font-size: 24px;
+    }
+    .LeftNavItem{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .Title{
+        font-size: 48px;
+    }
+    .LeftNavAdaptive{
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+}
