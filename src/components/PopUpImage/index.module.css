@@ -24,6 +24,7 @@
 }
 .Photo{
     max-height: 610px;
+    max-width: calc(100% - 15px);
 }
 .CloseSvg{
     position: absolute;
@@ -31,4 +32,16 @@
     right: -25px;
     cursor: pointer;
     transition: 0.2s;
+}
+@media only screen and (max-width: 1024px) {
+    .Wrapper{
+        width: calc(100% - 15px);
+        height: auto;
+    }
+    .CloseSvg{
+        display: none;
+    }
+    .PhotoContainer{
+        height: auto;
+    }
 }

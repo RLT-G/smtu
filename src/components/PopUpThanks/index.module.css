@@ -28,3 +28,12 @@
     right: -25px;
     cursor: pointer;
 }
+@media only screen and (max-width: 640px) {
+    .Wrapper{
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .Close{
+        display: none;
+    }
+}

@@ -4,9 +4,11 @@ import Carusel from "../Carusel";
 import news from "../../news.json";
 import article from "../../article.json";
 import feedbacks from "../../feedbacks.json";
+import { useNavigate } from "react-router-dom";
 
 
 const MainPageCarusel: React.FC = () => {
+    const navigate = useNavigate()
     const [caruselType, setCaruselType] = useState<string>("news")
 
     const getCaruselType = ():string => {
@@ -30,7 +32,13 @@ const MainPageCarusel: React.FC = () => {
                 </div>
 
                 <span className={classes.AllLinks}
-                    onClick={() => {}}>
+                    onClick={() => {
+                        caruselType === 'news'
+                            ? navigate('/news_articles?isNewsPage=true')
+                            : caruselType === 'article'
+                                ? navigate('/news_articles?isNewsPage=false')
+                                : navigate('/feedbacks')
+                    }}>
                     {caruselType === 'news' ? 'Все новости' : caruselType === 'article' ? 'Все статьи' : 'Все отзывы'}    
                 </span>                
             </div>

@@ -93,3 +93,34 @@
     color: #000;
     margin-right: 5px;
 }
+@media only screen and (max-width: 1024px) {
+    .Wrapper{
+        width: calc(100% - 15px);
+    }
+    .Button{
+        padding: unset;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .Input{
+        font-size: 12px;
+    }
+    .Input::placeholder{
+        font-size: 12px;
+    }
+    .Button{
+        font-size: 12px;
+    }
+    .Fio{
+        font-size: 14px;
+    }
+    .NRText{
+        font-size: 12px;
+    }
+    .Link {
+        font-size: 14px;
+    }
+    .Wrapper{
+        padding: 15px;
+    }
+}

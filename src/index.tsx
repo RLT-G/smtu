@@ -35,7 +35,7 @@ const App: React.FC = () => {
     // Страница Персоны
     { path: "/person", component: Person, exact: true }, // A
     // История
-    { path: "/history", component: History, exact: true },
+    { path: "/history", component: History, exact: true }, // A
     // Каталог
     { path: "/catalog", component: Catalog, exact: true }, // A
     // Факультеты общая
@@ -43,7 +43,7 @@ const App: React.FC = () => {
     // Факультеты Разделы
     { path: "/faculties_detail", component: FacultiesDetail, exact: true }, // A
     // Раздел ОПАБ
-    { path: "/opab", component: Opab, exact: true },
+    { path: "/opab", component: Opab, exact: true }, // A
     // ОПАБ календарь
     { path: "/opab_calendar", component: OpabCalendar, exact: true }, // A
     // ОПАБ Видео

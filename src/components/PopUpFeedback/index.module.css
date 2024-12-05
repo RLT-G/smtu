@@ -54,3 +54,8 @@
     color: #00AEEF;
     cursor: pointer;
 }
+@media only screen and (max-width: 800px) {
+    .Wrapper{
+        width: calc(100% - 30px);
+    }
+}
