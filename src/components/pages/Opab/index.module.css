@@ -78,6 +78,7 @@
     flex-direction: column;
     gap: 30px;
     transition: 0.2s;
+    max-width: 15%;
 }
 .LeftNavItemDate{
     font-family: "Ubuntu", sans-serif;
@@ -100,4 +101,68 @@
 }
 .LeftPanelSection{
     position: relative;
+}
+
+
+@media only screen and (max-width: 1600px) {
+    .Wrapper{
+        padding: 120px 150px;
+    }
+    .LeftNav{
+        left: 150px;
+    }
+}
+@media only screen and (max-width: 1500px) {
+    .Wrapper{
+        padding: 120px 100px;
+    }
+    .LeftNav{
+        left: 100px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .Wrapper{
+        padding: 120px 50px;
+    }
+    .LeftNav{
+        left: 50px;
+    }
+}
+@media only screen and (max-width: 1300px) {
+    .Wrapper{
+        padding: 120px 15px;
+    }
+    .LeftNav{
+        left: 15px;
+    }
+}
+@media only screen and (max-width: 1230px) {
+    .LeftNav{
+        display: none;
+    }
+    .ButtonContainer{
+        width: 100%;
+    }
+    .ButtonContainer2{
+        width: 100%;
+    }
+}
+.LeftNavAdaptive{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@media only screen and (max-width: 800px) {
+    .LeftNavAdaptive{
+        flex-direction: column;
+        gap: 15px;
+        align-items: start;
+    }
+}
+@media only screen and (max-width: 410px) {
+    .Title{
+        font-size: 48px;
+    }
 }

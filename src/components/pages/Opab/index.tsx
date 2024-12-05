@@ -64,6 +64,14 @@ const Opab: React.FC = () => {
           behavior: 'smooth',
         });
       };
+    
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <>
@@ -106,7 +114,14 @@ const Opab: React.FC = () => {
                                     <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2500); setLeftNavIndex(1)}}>Участники</span>
                                 </div>
                             )}
-
+                    {width <= 1230 && <>
+                        <div className={clases.LeftNavAdaptive}>
+                            <span className={clases.LeftNavItemDate}>История</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2000); setLeftNavIndex(1)}}>Календарь событий</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2500); setLeftNavIndex(2)}}>Участники</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(3250); setLeftNavIndex(2)}}>Видеопроект</span>
+                        </div>
+                    </>}
                     <ArticleText className={clases.LeftPanelSection} text={"В июле 1941 года был сформирован 264-й отдельный пулемётно-артиллерийский батальон, состоящий примерно из 1100 ополченцев-добровольцев. В батальон было отобрано примерно 450 студентов и сотрудников Ленинградского кораблестроительного института, около 650 добровольцев с завода им. Андре Марти (нынешние «Адмиралтейские верфи») и завода по обработке цветных металлов им. К.Е. Ворошилова."}/>
                     <ArticleText text={"Перед батальоном была поставлена боевая задача, создать полосу обороны, протяжённостью около 10 километров. Линия обороны начиналась у ж/д платформы «Фонтаны», захватывала Бабигонские высоты, где раскинулись деревни Сашино, Костино, Низино, Санино, а также населённые пункты Марьино, Ольгино, Владимировка и Мишино."}/>
                     <ArticleText text={"Система обороны включала в себя возведение дотов (долговременная огневая точка) и дзотов (деревоземляная огневая точка). С раннего утра и до позднего вечера ополченцы 264-ого ОПАБа рыли котлованы для дзотов, устанавливали орудия и пулемёты, копали траншеи, создавали противотанковые надолбы, натягивали колючую проволоку. Помогало вести земляные работы гражданское население."}/>
@@ -118,6 +133,14 @@ const Opab: React.FC = () => {
                     <ArticleText text={"Благодаря героизму и храбрости ополченцев, в ходе контратаки батальон продвинулся вперед, захватил пленных и трофеи: батарею легких пушек, танкетки, пулеметы, полевые передвижные радиостанции. Но успех закрепить не удалось, так как в живых в батальоне осталось не более 5% личного состава: из 1100 человек-ополченцев выжили не более 100 человек. Батальон был расформирован, но выполнил свою боевую задачу - с этого дня на этом участке обороны враг не продвинулся ни на шаг!"}/>
                     <ArticleText text={"Многие пали смертью храбрых. Многие имена невозможно восстановить. Но мы всегда будем помнить защитников, героев, молодых ребят, отдавших за нас свои жизни. Солдат умирает-когда о нём забывают. Мы не забудем!"}/>
                     <br/><br/>
+                    {width <= 1230 && <>
+                        <div className={clases.LeftNavAdaptive}>
+                            <span className={clases.LeftNavItemDate}>Календарь событий</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>История</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2500); setLeftNavIndex(2)}}>Участники</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(3250); setLeftNavIndex(2)}}>Видеопроект</span>
+                        </div>
+                    </>}
                     <ArticleText className={clases.LeftPanelSection} text={"Вся история 264-го ОПАБ от набора добовровольцев в ополчение и до его расформирования после потери 95% личного состава умещается в три месяца.  Наши сотрудники по крупицам собрали информацию из различных источников и смогли восстановить полную хронологию событий 264-го батальона. "}/>
                     <ArticleText text={"Основные вехи мы собрали в небольшой инфографике, с которой можно познакомиться по кнопке ниже. "}/>
                     <div className={clases.ButtonContainer}>
@@ -125,6 +148,14 @@ const Opab: React.FC = () => {
                             временная шкала
                         </Button>
                     </div>
+                    {width <= 1230 && <>
+                        <div className={clases.LeftNavAdaptive}>
+                            <span className={clases.LeftNavItemDate}>Участники</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>История</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2000); setLeftNavIndex(1)}}>Календарь событий</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(3250); setLeftNavIndex(1)}}>Видеопроект</span>
+                        </div>
+                    </>}
                     <OpabCarusel className={clases.LeftPanelSection}>
                         {persons.items.map(({ id, rank, photo, fio }, index) => <PersonItem key={index} id={id} rank={rank} photo={photo} fio={fio}/>)}
                     </OpabCarusel>
@@ -133,6 +164,14 @@ const Opab: React.FC = () => {
                             Посмотреть всех
                         </Button>
                     </div>
+                    {width <= 1230 && <>
+                        <div className={clases.LeftNavAdaptive}>
+                            <span className={clases.LeftNavItemDate}>Видеопроект</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>История</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2000); setLeftNavIndex(1)}}>Календарь событий</span>
+                            <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(2500); setLeftNavIndex(1)}}>Участники</span>
+                        </div>
+                    </>}
                     <ArticleText className={clases.LeftPanelSection} text={"«Хронология 264-го ОПАБа. Подвиг Героев судостроителей» — это видеопроект, созданный студентами СПбГМТУ в память о подвиге студентов и сотрудников Ленинградского кораблестроительного института."}/>
                     
                     <OpabCarusel>

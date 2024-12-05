@@ -38,3 +38,24 @@
 .ArrowRight{
     right: -52px;
 }
+@media only screen and (max-width: 1230px) {
+    .Wrapper{
+        width: calc(100% - 100px);
+    }
+    .ArrowRight{
+        right: 52px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .Wrapper{
+        width: 100%;
+        max-width: 100%;
+        overflow-x: scroll;
+    }
+    .ArrowLeft{
+        display: none;
+    }
+    .ArrowRight{
+        display: none;
+    }
+}

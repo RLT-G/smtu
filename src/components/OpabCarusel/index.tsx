@@ -7,11 +7,19 @@ interface IOpabCarusel {
 }
 
 const OpabCarusel: React.FC<IOpabCarusel> = ({ children, className }) => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+
+    React.useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     const [startIndex, setStartIndex] = useState<number>(0);
 
     const childrenArray = React.Children.toArray(children);
 
-    const visibleCount = 3;
+    const visibleCount = width > 1024 ? 3 : childrenArray.length;
 
     const visibleItems = childrenArray.slice(startIndex, startIndex + visibleCount);
 
@@ -34,7 +42,7 @@ const OpabCarusel: React.FC<IOpabCarusel> = ({ children, className }) => {
                     <div
                         key={index}
                         className={classes.Item}
-                        style={{ opacity: 1 - index * 0.4 }}
+                        style={width > 1024 ? { opacity: 1 - index * 0.4 } : { opacity: 1 }}
                     >
                         {child}
                     </div>
