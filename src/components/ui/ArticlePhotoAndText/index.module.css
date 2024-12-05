@@ -27,3 +27,35 @@
     line-height: 140%;
     letter-spacing: 0.02em;
 }
+@media only screen and (max-width: 1200px) {
+    .Wrapper{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Text{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .Wrapper{
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    .Text{
+        font-size: 15px;
+        align-self: self-start;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .Text{
+        font-size: 12px;
+        align-self: self-start;
+    }
+    .Photo{
+        width: 100%;
+        aspect-ratio: 1.5;
+        height: auto;
+    }
+}

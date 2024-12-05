@@ -44,6 +44,13 @@ const Articles: React.FC = () => {
         return article_id
     }
     const article_id = get_article_id()
+    const [width, setWidth] = React.useState(window.innerWidth);
+  
+    React.useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <>
@@ -62,7 +69,14 @@ const Articles: React.FC = () => {
                 </div>
                 {articleData.items.find(({ id }) => id === article_id)?.page.map((pageElement, index) => {
                     if (pageElement.type === "title") {
-                        return <ArticleTitle text={pageElement.content}/>
+                        if (width > 1200) {
+                            return <ArticleTitle text={pageElement.content}/>
+                        } else {
+                            return <ArticleTitle text={pageElement.content}
+                                date={articles.items.find(({ id }) => id === article_id)?.date} 
+                                author={articleData.items.find(({ id }) => id === article_id)?.author}
+                                time={articleData.items.find(({ id }) => id === article_id)?.time}/>
+                        }
 
                     } else if (pageElement.type === "photo") {
                         return <ArticlePhoto url={pageElement.content}/>

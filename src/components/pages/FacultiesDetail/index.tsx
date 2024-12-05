@@ -68,6 +68,14 @@ const FacultiesDetail: React.FC = () => {
     const [popUpIsOpen, setPopUpIsOpen] = useState<boolean>(false)
     const openPopUp = (): void => { setPopUpIsOpen(true) }
     const closePopUp = (): void => { setPopUpIsOpen(false) }
+    const [width, setWidth] = React.useState(window.innerWidth);
+  
+    React.useEffect(() => {
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <>
             <Header isMainPage={false}/>
@@ -75,22 +83,22 @@ const FacultiesDetail: React.FC = () => {
                 <div className={classes.TabsSelector}>
                     <button className={[classes.TabsBtn, facultet === 'kio' && classes.Active].join(' ')}
                         onClick={() => {setFacultet('kio')}}
-                    >Кораблестроения и океанотехники</button>
+                    >{width > 640 ? "Кораблестроения и океанотехники" : "КИО"}</button>
                     <button className={[classes.TabsBtn, facultet === 'kaia' && classes.Active].join(' ')}
                         onClick={() => {setFacultet('kaia')}}
-                    >корабельной энергетики и автоматики</button>
+                    >{width > 640 ? "корабельной энергетики и автоматики" : "КЭИА"}</button>
                     <button className={[classes.TabsBtn, facultet === 'cpt' && classes.Active].join(' ')}
                         onClick={() => {setFacultet('cpt')}}
-                    >цифровых промышленных технологий</button>
+                    >{width > 640 ? "цифровых промышленных технологий" : "ЦПТ"}</button>
                     <button className={[classes.TabsBtn, facultet === 'ia' && classes.Active].join(' ')}
                         onClick={() => {setFacultet('ia')}}
-                    >Инженерно-экономический</button>
+                    >{width > 640 ? "Инженерно-экономический" : "ИЭ"}</button>
                     <button className={[classes.TabsBtn, facultet === 'mp' && classes.Active].join(' ')}
                         onClick={() => {setFacultet('mp')}}
-                    >морского приборостроения</button>
+                    >{width > 640 ? "морского приборостроения" : "МП"}</button>
                     <button className={[classes.TabsBtn, facultet === 'eigo' && classes.Active].join(' ')}
                         onClick={() => {setFacultet('eigo')}}
-                    >естественнонаучного и гуманитарного образования</button>
+                    >{width > 640 ? "естественнонаучного и гуманитарного образования" : "ФЕНГО"}</button>
                 </div>
                 <span className={classes.Title}>
                     {facultet === 'kio' && titles.kio}
@@ -118,13 +126,34 @@ const FacultiesDetail: React.FC = () => {
                     
                     </div>
                 </div>
-                <div className={classes.Personality}>
-                    <span className={classes.PersonalityTitle}>Персоналии</span>
-                    <Button className={classes.PersonalityBtn} onClick={() => {navigate(`/other?filter=${facultet}`)}}>посмотреть всех</Button>
-                </div>
+                {width > 640 && (
+                    <>
+                        <div className={classes.Personality}>
+                            <span className={classes.PersonalityTitle}>Персоналии</span>
+                            <Button className={classes.PersonalityBtn} onClick={() => {navigate(`/other?filter=${facultet}`)}}>посмотреть всех</Button>
+                        </div>
+                    </>
+                )}
+                {width <= 640 && (
+                    <>
+                        <div className={classes.Personality}>
+                            <span className={classes.PersonalityTitle}>Персоналии</span>
+                        </div>
+                    </>
+                )}
+
                 <div className={classes.PersonsContainer}>
                     {getPersonsViaF().slice(0, 3).map(([id, fio, rank, photo, faculty]) => <PersonItem id={id} fio={fio} rank={rank} photo={photo}/>)}
                 </div>
+
+                {width <= 640 && (
+                    <>
+                        <div className={classes.Personality} style={{marginTop: '50px'}}>
+                            <Button className={classes.PersonalityBtn} onClick={() => {navigate(`/other?filter=${facultet}`)}}>посмотреть всех</Button>
+                        </div>
+                    </>
+                )}
+                
             </div>
             <Footer />
         </>

@@ -12,3 +12,18 @@
     line-height: 140%;
     letter-spacing: 0.02em;
 }
+@media only screen and (max-width: 1200px) {
+    .Wrapper{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .text{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .text{
+        font-size: 12px;
+    }
+}

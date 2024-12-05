@@ -1,12 +1,13 @@
 .Wrapper{
-    display: flex;
-    flex-direction: column;
-    padding: 60px 200px 120px 200px;
-    width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 60px 15px 120px 15px;
+        width: 100%;
+        align-items: center;
 }
 .TabsSelector{
     display: flex;
-    width: 100%;
+    width: 1200px;
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
@@ -37,11 +38,12 @@
     font-weight: 700;
     font-size: 64px;
     color: #01437C;
-    max-width: 1000px;
+    max-width: 1200px;
+    width: 1200px;
     margin-bottom: 60px;
 }
 .FTextAndPhoto{
-    width: 100%;
+    width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -79,6 +81,8 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    width: 1200px;
+
 }
 .PersonalityTitle{
     font-family: "Ubuntu", sans-serif;
@@ -96,4 +100,72 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+}
+@media only screen and (max-width: 1230px) {
+    .TabsSelector{
+        width: 100%;
+    }
+    .Title{
+        max-width: 100%;
+        width: 100%;
+    }
+    .FTextAndPhoto{
+        width: 100%;
+    }
+    .Personality{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .FTextAndPhoto{
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+    .Photo{
+        width: 100%;
+        aspect-ratio: 1.4;
+        height: auto;
+    }
+    .Text{
+        width: 100%;
+    }
+    .PersonsContainer{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: start;
+        gap: 20px;
+        overflow-x: scroll;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .TabsBtn{
+        font-size: 12px;
+    }
+    .Title{
+        font-size: 52px;
+    }
+}
+@media only screen and (max-width: 640px) {
+    .PersonalityBtn{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .Title{
+        font-size: 36px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .TabsSelector{
+        gap: 10px;
+    }
+    .Text{
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    .Title{
+        font-size: 28px;
+    }
 }

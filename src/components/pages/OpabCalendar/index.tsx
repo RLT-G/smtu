@@ -16,7 +16,7 @@ const OpabCalendar: React.FC = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
-    console.log(width)
+    
     return (
         <>
             <Header isMainPage={false}/>

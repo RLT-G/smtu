@@ -44,3 +44,55 @@
     font-weight: 700;
     font-size: 20px;
 }
+@media only screen and (max-width: 1550px) {
+    .Wrapper{
+        padding: 120px 150px;
+    }
+    .DateAuthorTime{
+        left: 150px;
+    }
+    .Source{
+        left: 150px;
+    }
+}
+@media only screen and (max-width: 1450px) {
+    .Wrapper{
+        padding: 120px 100px;
+    }
+    .DateAuthorTime{
+        left: 100px;
+    }
+    .Source{
+        left: 100px;
+    }
+}
+@media only screen and (max-width: 1400px) {
+    .Wrapper{
+        padding: 120px 50px;
+    }
+    .DateAuthorTime{
+        left: 50px;
+    }
+    .Source{
+        left: 50px;
+    }
+}
+@media only screen and (max-width: 1350px) {
+    .Wrapper{
+        padding: 120px 15px;
+    }
+    .DateAuthorTime{
+        left: 15px;
+    }
+    .Source{
+        left: 15px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    .DateAuthorTime{
+        display: none
+    }
+    .Source{
+        display: none
+    }
+}

@@ -41,11 +41,11 @@ const App: React.FC = () => {
     // Факультеты общая
     { path: "/faculties", component: Faculties, exact: true }, // A
     // Факультеты Разделы
-    { path: "/faculties_detail", component: FacultiesDetail, exact: true },
+    { path: "/faculties_detail", component: FacultiesDetail, exact: true }, // A
     // Раздел ОПАБ
     { path: "/opab", component: Opab, exact: true },
     // ОПАБ календарь
-    { path: "/opab_calendar", component: OpabCalendar, exact: true },
+    { path: "/opab_calendar", component: OpabCalendar, exact: true }, // A
     // ОПАБ Видео
     { path: "/opab_video", component: OpabVideos, exact: true }, //A
     // Остальное
@@ -53,13 +53,13 @@ const App: React.FC = () => {
     // Новости/статьи
     { path: "/news_articles", component: NewsArticles, exact: true }, // A
     // Страница статьи
-    { path: "/articles", component: Articles, exact: true },
+    { path: "/articles", component: Articles, exact: true }, // A
     // Отзывы
     { path: "/feedbacks", component: Feedbacks, exact: true }, // A
     // Контакты
     { path: "/contacts", component: Contacts, exact: true }, // A
     // 404
-    { path: "*", component: NotFound, exact: true },
+    { path: "*", component: NotFound, exact: true }, // A
   ];
 
   return (

@@ -1,6 +1,7 @@
 .Wrapper{
     width: 895px;
     display: flex;
+    flex-direction: column;
     text-align: start;
 }
 .Title{
@@ -9,4 +10,69 @@
     font-size: 40px;
     color: #01437C;
     text-align: start;    
+    margin-bottom: 30px;
+}
+
+
+
+.Date, .AuthorTitle, .TimeTitle, .Author, .Time{
+    font-family: "Ubuntu", sans-serif;
+    color: #01437C;
+}
+.Date{
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.AuthorTitle, .TimeTitle{
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.Author, .Time{
+    font-weight: 700;
+    font-size: 20px;
+}
+.AuthorTimeContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    width: 50%;
+
+}
+.TimeContainer, .AuthorContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+@media only screen and (max-width: 1200px) {
+    .Wrapper{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .Title{
+        font-size: 28px;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .AuthorTimeContainer{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .Title{
+        font-size: 18px;
+    }
+    .AuthorTitle, .TimeTitle{
+        font-size: 12px;
+    }
+    .Author, .Time{
+        font-size: 12px;
+    }
 }
