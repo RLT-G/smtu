@@ -19,7 +19,7 @@ interface IvideoContent {
 const OpabVideos: React.FC = () => {
   const [leftNavIndex, setLeftNavIndex] = useState<number>(0)
   const [navIsFixed, setNavIsFixed] = useState<boolean>(false)
-    
+  const [scrollY, setScrollY] = useState<number>(window.scrollY)
   useEffect(() => {
       const handleScroll = () => {
           const sections = document.querySelectorAll(`.${classes.LeftPanelSection.replace(/\+/g, '\\+')}`);
@@ -29,6 +29,7 @@ const OpabVideos: React.FC = () => {
           } else {
             setNavIsFixed(false)
           }
+          setScrollY(window.scrollY)
           sections.forEach((section, index) => {
               const rect = section.getBoundingClientRect();
               const sectionTop = rect.top + window.scrollY;
@@ -81,7 +82,7 @@ const OpabVideos: React.FC = () => {
             opacity: navIsFixed ? '1' : '0',
             zIndex: navIsFixed ? '1' : '-1'
           }}>
-            {buttonContent.map(({ scrollTo, text }, index) => 
+            {scrollY < 9995 && buttonContent.map(({ scrollTo, text }, index) => 
               <button className={[classes.NavButton, leftNavIndex === index && classes.Active].join(' ')}
                 onClick={() => {smoothScrollTo(scrollTo)}}>{text}</button>)}
           </div>
@@ -123,8 +124,8 @@ const OpabVideos: React.FC = () => {
                 <span className={[classes.RText, classes.Last].join(' ')}>А также авторы книги «Корабелы в боях за город Ленина»  Л.М. Видуцкий, Н.И. Семьянов, М.Д. Утюжников, В.Б. Чернобривец.</span>
               </div>
             </div>
-            {videoContent.map(({caption, src, photo}) => 
-                <Video className={classes.LeftPanelSection} src={src} caption={caption} photo={photo}/>
+            {videoContent.map(({caption, src, photo}, index) => 
+                <Video key={index} className={classes.LeftPanelSection} src={src} caption={caption} photo={photo}/>
             )}
           </div>
         </div>

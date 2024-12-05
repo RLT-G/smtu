@@ -10,11 +10,13 @@ import ArticlePhotoAndCaption from "../../ui/ArticlePhotoAndCaption";
 
 const History: React.FC = () => {
     const [leftNavIndex, setLeftNavIndex] = useState<number>(0)
-    
+    const [scrollY, setScrollY] = useState<number>(window.scrollY)
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll(`.${classes.Section1.replace(/\+/g, '\\+')}`);
             const scrollPosition = window.scrollY + window.innerHeight / 2;
+            // console.log(window.scrollY)
+            setScrollY(window.scrollY)
             sections.forEach((section, index) => {
                 const rect = section.getBoundingClientRect();
                 const sectionTop = rect.top + window.scrollY;
@@ -54,7 +56,7 @@ const History: React.FC = () => {
             <div className={classes.Wrapper}>
                 <span className={classes.Title}>История ЛКИ </span>
                 <div className={classes.InnerWrapper}>
-                    {leftNavIndex === 0
+                    {leftNavIndex === 0 && scrollY < 5382
                         ? (
                             <div className={classes.LeftNav} style={{transform: 'translateY(64px)'}}>
                                 <span className={classes.LeftNavItemDate}>с 1931 по 1941</span>
@@ -62,7 +64,7 @@ const History: React.FC = () => {
                                 <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(4000); setLeftNavIndex(2)}}>в мирное время</span>
                             </div>
                         )
-                        : leftNavIndex === 1
+                        : leftNavIndex === 1 && scrollY < 5382
                             ? (
                                 <div className={classes.LeftNav}>
                                     <span className={classes.LeftNavItemDate}>с 1941 по 1945</span>
@@ -70,7 +72,7 @@ const History: React.FC = () => {
                                     <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(4000); setLeftNavIndex(2)}}>в мирное время</span>
                                 </div>
                             )
-                            : (
+                            : scrollY < 5382 && (
                                 <div className={classes.LeftNav} style={{transform: 'translateY(-64px)'}}>
                                     <span className={classes.LeftNavItemDate}>с 1945 по 1980</span>
                                     <span className={classes.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>до войны</span>

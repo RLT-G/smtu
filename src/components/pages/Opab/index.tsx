@@ -35,11 +35,12 @@ const Opab: React.FC = () => {
         return romanNumerals.find(r => r.value === num)?.numeral;
     }
     const [leftNavIndex, setLeftNavIndex] = useState<number>(0)
-    
+    const [scrollY, setScrollY] = useState<number>(window.scrollY)
     useEffect(() => {
         const handleScroll = () => {
             const sections = document.querySelectorAll(`.${clases.LeftPanelSection.replace(/\+/g, '\\+')}`);
             const scrollPosition = window.scrollY + window.innerHeight / 2;
+            setScrollY(window.scrollY)
             sections.forEach((section, index) => {
                 const rect = section.getBoundingClientRect();
                 const sectionTop = rect.top + window.scrollY;
@@ -79,7 +80,7 @@ const Opab: React.FC = () => {
             <div className={clases.Wrapper}>
                 <span className={clases.Title}>264-й ОПАБ</span>
                 <div className={clases.InnerWrapper}>
-                    {leftNavIndex === 0
+                    {leftNavIndex === 0 && scrollY < 3587
                         ? (
                             <div className={clases.LeftNav} style={{transform: 'translateY(64px)'}}>
                                 <span className={clases.LeftNavItemDate}>История</span>
@@ -88,7 +89,7 @@ const Opab: React.FC = () => {
                                 <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(3250); setLeftNavIndex(2)}}>Видеопроект</span>
                             </div>
                         )
-                        : leftNavIndex === 1
+                        : leftNavIndex === 1 && scrollY < 3587
                             ? (
                                 <div className={clases.LeftNav}>
                                     <span className={clases.LeftNavItemDate}>Календарь событий</span>
@@ -97,7 +98,7 @@ const Opab: React.FC = () => {
                                     <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(3250); setLeftNavIndex(2)}}>Видеопроект</span>
                                 </div>
                             )
-                            : leftNavIndex === 2 
+                            : leftNavIndex === 2 && scrollY < 3587
                                 ? (
                                     <div className={clases.LeftNav} style={{transform: 'translateY(-64px)'}}>
                                         <span className={clases.LeftNavItemDate}>Участники</span>
@@ -106,7 +107,7 @@ const Opab: React.FC = () => {
                                         <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(3250); setLeftNavIndex(1)}}>Видеопроект</span>
                                     </div>
                                 ) 
-                                : (
+                                : scrollY < 3587 &&(
                                 <div className={clases.LeftNav} style={{transform: 'translateY(-128px)'}}>
                                     <span className={clases.LeftNavItemDate}>Видеопроект</span>
                                     <span className={clases.LeftNavItem} onClick={() => {smoothScrollTo(0); setLeftNavIndex(0)}}>История</span>

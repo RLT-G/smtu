@@ -97,9 +97,6 @@
     .Wrapper{
         width: calc(100% - 15px);
     }
-    .Button{
-        padding: unset;
-    }
 }
 @media only screen and (max-width: 640px) {
     .Input{
@@ -121,6 +118,11 @@
         font-size: 14px;
     }
     .Wrapper{
+        padding: 15px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .Input{
         padding: 15px;
     }
 }
